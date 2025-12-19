@@ -16,7 +16,8 @@
 - copy your `appId`
 
 ## 🍤 install shrimple into your web app
-- it's gonna be easy, i promise 🙏
+
+### it's gonna be easy, i promise 🙏
 - install via npm
     ```bash
     npm install @e280/shrimple
@@ -25,34 +26,34 @@
     ```js
     import shrimple from "@e280/shrimple"
     ```
-- clientside javascript
-    - setup
-        ```js
-        // 🦐 paste your appId from shrimple.io
-        const appId = "5450372dcb89a55b70b363d66713afdced9faf521bc9daa9284f92b4bb04e668"
 
-        const auth = await shrimple(appId)
-        ```
-    - react to login/logout happenings
-        ```js
-        auth.onChange(user => {
-          if (user) console.log("logged in!", user.name)
-          else console.log("logged out")
-        })
-        ```
-    - trigger a login popup (must be on user event!)
-        ```js
-        auth.loginPopup()
-        ```
-    - grab the user token (send to your server in api requests)
-        ```js
-        auth.user?.token
-        ```
-    - logout
-        ```js
-        await auth.logout()
-        ```
-- serverside javascript to crypto-verify the user info
+### clientside javascript
+- setup auth
+    ```js
+    // 🦐 paste your appId from shrimple.io
+    const auth = await shrimple("5450372dcb89a55b70b363d66713afdced9faf521bc9daa9284f92b4bb04e668")
+    ```
+- react to login/logout happenings
+    ```js
+    auth.onChange(user => {
+      if (user) console.log("logged in!", user.name)
+      else console.log("logged out")
+    })
+    ```
+- trigger a login popup (must be on user event!)
+    ```js
+    auth.loginPopup()
+    ```
+- grab the user token (send to your server in api requests)
+    ```js
+    auth.user?.token
+    ```
+- logout
+    ```js
+    await auth.logout()
+    ```
+### serverside javascript
+- crypto-verify the user info
     ```js
     const user = await shrimple.verify(token)
     ```
