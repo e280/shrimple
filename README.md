@@ -1,14 +1,19 @@
 
-# 🦐 shrimple.io
-> *simplest cheapest auth in the world*
-
 > [!IMPORTANT]
 > wip — this is a design doc to guide our initial prototype.
 
+
+
+<br/></br>
+
+# 🦐 shrimple.io
+> *simplest cheapest auth in the world*
+
 ## 🍤 setup on shrimple.io
-- login and create your app
+- login and click `create app`
 - enter your `allowed origins`
 - check on the `auth providers` you want to allow
+- copy your `appId`
 
 ## 🍤 install shrimple into your web app
 it's gonna be easy, i promise 🙏
@@ -23,23 +28,23 @@ it's gonna be easy, i promise 🙏
 - clientside javascript
     - setup
         ```js
-        // 🦐 your app id from shrimple.io
+        // 🦐 paste your app id from shrimple.io
         const appId = "5450372dcb89a55b70b363d66713afdced9faf521bc9daa9284f92b4bb04e668"
 
         const auth = await shrimple(appId)
         ```
-    - react to login/logout
+    - react to login/logout happenings
         ```js
         auth.onChange(user => {
           if (user) console.log("logged in!", user.name)
           else console.log("logged out")
         })
         ```
-    - trigger a popup (must be on user event)
+    - trigger a login popup (must be on user event!)
         ```js
         auth.loginPopup()
         ```
-    - get the user token (send to your server in api requests)
+    - grab the user token (send to your server in api requests)
         ```js
         auth.user?.token
         ```
@@ -47,9 +52,8 @@ it's gonna be easy, i promise 🙏
         ```js
         await auth.logout()
         ```
-- serverside javascript
+- serverside javascript to crypto-verify the user info
     ```js
-    // 🦐 cryptographically verify the token to get user info
     const user = await shrimple.verify(token)
     ```
 
@@ -65,7 +69,7 @@ it's gonna be easy, i promise 🙏
 - `user.sessionId` — *string*  
   ephemeral id for this one login session, looks like `"3642b7a2ff316e43aff061ae021d69884484ed3286248fc10349ddee7902b146"`
 - `user.token` — *string*  
-  json web token for this session, can be cryptographically verified on your servers
+  json web token for this session, for crypto-verification magic
 
 
 
