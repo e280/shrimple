@@ -16,7 +16,7 @@
 - copy your `appId`
 
 ## 🍤 install shrimple into your web app
-it's gonna be easy, i promise 🙏
+- it's gonna be easy, i promise 🙏
 - install via npm
     ```bash
     npm install @e280/shrimple
@@ -58,28 +58,20 @@ it's gonna be easy, i promise 🙏
     ```
 
 ## 🍤 nerdy details
-- **`user.id` — *string***  
+- 🦐 **`user.id` — *string***  
   perma id for the user, like `"b4f405d674b4c6ab3f0002faee7be09de03b821ce5d3e928fb28a31be54a19ec"`
-- **`user.name` — *string***  
+- 🦐 **`user.name` — *string***  
   a name/label/nickname, might be `"Bubba Gump"` or `"bubba"` or a randomly generated one like `"worluc.magbyl"`
-- **`user.email` — *string | null***  
+- 🦐 **`user.email` — *string | null***  
   the user's email, like `bubba@shrimple.io`, but not all auth providers provide this  
-- **`user.provider` — *"authlocal" | "google" | "apple" | "microsoft"***  
+- 🦐 **`user.provider` — *"authlocal" | "google" | "apple" | "microsoft"***  
   the name of the service that promised the login is legit
-- **`user.sessionId` — *string***  
+- 🦐 **`user.sessionId` — *string***  
   ephemeral id for this one login session, looks like `"3642b7a2ff316e43aff061ae021d69884484ed3286248fc10349ddee7902b146"`
-- **`user.token` — *string***  
+- 🦐 **`user.token` — *string***  
   json web token for this session, for crypto-verification magic
-
-
-
-<br/><br/>
 
 ## 🧑‍💻 by e280
 reward us with github stars  
 build with us at https://e280.org/ if you're good at dev  
-
-
-
-<br/><br/>
 
