@@ -7,7 +7,11 @@
 <br/></br>
 
 # 🦐 shrimple.io
-> *simplest cheapest auth in the world*
+> *shrimplest cheapest auth in the world*
+
+- designed to be the simplest auth system on earth, deadass
+- free for *infinity* users on the [authlocal.org](https://authlocal.org/) provider
+- for fancier auth providers, we make it so cheap you'll think we're joking
 
 ## 🍤 setup on shrimple.io
 - login and click `create app`
