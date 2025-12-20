@@ -20,6 +20,10 @@
 - 🦞 **lobster-tier** — `$3/month` — 100k logins via any provider
 - 🐋 **whale-tier** — `$69/month` — infinity logins via any provider
 
+
+
+<br/></br>
+
 ## 🍤 shrimple app setup
 - login at https://shrimple.io/ and create your first app
 - enter your `allowed origins`
@@ -69,6 +73,10 @@
     const user = await shrimple.verify(token)
     ```
 
+
+
+<br/></br>
+
 ## 🍤 shrimple details
 - 🦐 **`user.id` — *string***  
   perma id for the user, like `"b4f405d674b4c6ab3f0002faee7be09de03b821ce5d3e928fb28a31be54a19ec"`
@@ -82,6 +90,10 @@
   ephemeral id for this one login session, looks like `"3642b7a2ff316e43aff061ae021d69884484ed3286248fc10349ddee7902b146"`
 - 🦐 **`user.token` — *string***  
   json web token for this session, for crypto-verification magic
+
+
+
+<br/></br>
 
 ## 🧑‍💻 by e280
 reward us with github stars  
