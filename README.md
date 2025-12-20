@@ -36,7 +36,7 @@
 
 ## 🍤 shrimple code
 
-### it's gonna be easy, i promise 🙏
+### 🐡 it's gonna be easy, i promise 🙏
 - install via npm
     ```bash
     npm install @e280/shrimple
@@ -46,7 +46,7 @@
     import shrimple from "@e280/shrimple"
     ```
 
-### clientside javascript
+### 🐡 clientside javascript
 - setup auth
     ```js
     // 🦐 paste your appId from shrimple.io
@@ -71,7 +71,7 @@
     ```js
     await auth.logout()
     ```
-### serverside javascript
+### 🐡 serverside javascript
 - crypto-verify the user info
     ```js
     const user = await shrimple.verify(token)
