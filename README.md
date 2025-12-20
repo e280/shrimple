@@ -16,7 +16,7 @@
 - shrimple only works one way — the good one
 
 ### stupidly cheap. i totally didn't just make up these numbers just now.
-- 🦐 **shrimp-tier** — `$0/month` — infinity logins via [authlocal.org](https://authlocal.org/)
+- 🦐 **shrimp-tier** — `$0/month` — infinity free logins via [authlocal.org](https://authlocal.org/)
 - 🦞 **lobster-tier** — `$3/month` — 100k logins via any provider
 - 🐋 **whale-tier** — `$69/month` — infinity logins via any provider
 
