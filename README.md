@@ -7,19 +7,26 @@
 <br/></br>
 
 # 🦐 shrimple.io
-> *shrimplest cheapest auth in the world*
+> *everything should be made as shrimple as possible, but not shrimpler.*  
+> &nbsp; &nbsp; *— albert einstein*
 
-- designed to be the simplest auth system on earth, deadass
-- free for *infinity* users on the [authlocal.org](https://authlocal.org/) provider
-- for fancier auth providers, we make it so cheap you'll think we're joking
+### the deadass shrimplest auth system, ever.
+- keep it shrimple, stupid — we authenticate logins, doing nothing else
+- minimalist config — we're obsessed with shrimplicity
+- shrimple only works one way — the good one
 
-## 🍤 setup on shrimple.io
-- login and click `create app`
+### stupidly cheap. i totally didn't just make up these numbers just now.
+- 🦐 **shrimp-tier** — `$0/month` — infinity logins via [authlocal.org](https://authlocal.org/)
+- 🦞 **lobster-tier** — `$3/month` — 100k logins via any provider
+- 🐋 **whale-tier** — `$69/month` — infinity logins via any provider
+
+## 🍤 shrimple app setup
+- login at https://shrimple.io/ and create your first app
 - enter your `allowed origins`
-- check on the `auth providers` you want to allow
+- flip on the `auth providers` you want to allow
 - copy your `appId`
 
-## 🍤 install shrimple into your web app
+## 🍤 shrimple code
 
 ### it's gonna be easy, i promise 🙏
 - install via npm
@@ -62,7 +69,7 @@
     const user = await shrimple.verify(token)
     ```
 
-## 🍤 nerdy details
+## 🍤 shrimple details
 - 🦐 **`user.id` — *string***  
   perma id for the user, like `"b4f405d674b4c6ab3f0002faee7be09de03b821ce5d3e928fb28a31be54a19ec"`
 - 🦐 **`user.name` — *string***  
