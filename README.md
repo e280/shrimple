@@ -30,6 +30,10 @@
 - flip on the `auth providers` you want to allow
 - copy your `appId`
 
+
+
+<br/></br>
+
 ## 🍤 shrimple code
 
 ### it's gonna be easy, i promise 🙏
