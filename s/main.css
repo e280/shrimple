@@ -2,31 +2,135 @@
 
 @layer vars {
 	:root {
-		color-scheme: dark;
+		--root-font-size: 16px;
 
-		--link: #7dd3fc;
-		--prime: #f97316;
-		--special: #38bdf8;
-
-		--bg: #0b1020;
-		--plate: #121a2f;
-
-
-		--bg-main: radial-gradient(
-			1200px 800px at 50% -200px,
-			#1c2a4a 0%,
-			#0b1020 45%,
-			#070b14 100%
+		--bg: light-dark(
+			hsl(195 50% 98%),
+			hsl(220 25% 8%)
 		);
 
-		--text-main: #e8ecf3;
-		--text-muted: #aab1c5;
+		--text: light-dark(
+			hsl(220 25% 15%),
+			hsl(195 50% 95%)
+		);
 
-		--blue: #2f6bff;
-		--blue-hover: #3d7bff;
+		--bg-card: light-dark(
+			hsl(0 0% 100%),
+			hsl(220 25% 12%)
+		);
 
-		--card-bg: rgba(255, 255, 255, 0.06);
-		--card-border: rgba(255, 255, 255, 0.12);
+		--bg-popover: var(--bg-card);
+
+		--prime: hsl(12 85% 60%);
+		--prime-text: hsl(0 0% 100%);
+
+		--danger: light-dark(
+			hsl(0 84% 60%),
+			hsl(0 62% 30%)
+		);
+		--danger-text: hsl(0 0% 100%);
+
+		--text-strong: color-mix(in oklab, transparent, var(--text) 90%);
+		--text-muted: color-mix(in oklab, transparent, var(--text) 60%);
+		--text-weaker: color-mix(in oklab, transparent, var(--text) 35%);
+
+		--text-card: var(--text);
+		--text-popover: var(--text);
+
+		--text-secondary: color-mix(in oklab, var(--text), var(--prime) 35%);
+		--text-accent: color-mix(in oklab, var(--text), var(--prime) 55%);
+
+		--bg-muted: color-mix(in oklab, var(--bg), var(--text) 4%);
+		--bg-secondary: color-mix(in oklab, var(--bg), var(--prime) 6%);
+		--bg-accent: color-mix(in oklab, var(--bg), var(--prime) 12%);
+
+		--border: color-mix(in oklab, var(--bg), var(--text) 15%);
+		--input: color-mix(in oklab, var(--bg), var(--text) 18%);
+		--focus-ring: color-mix(in oklab, var(--prime), white 25%);
+
+		--tier-shrimp: hsl(12 85% 60%);
+		--tier-crab: hsl(25 90% 55%);
+		--tier-lobster: hsl(0 75% 50%);
+		--tier-whale: hsl(210 80% 55%);
+
+		--bg-code: color-mix(in oklab, var(--bg), black 12%);
+		--text-code: color-mix(in oklab, var(--text), white 10%);
+
+		--sidebar-bg: color-mix(in oklab, var(--bg), black 6%);
+		--sidebar-text: var(--text);
+		--sidebar-prime: var(--prime);
+		--sidebar-prime-text: var(--prime-text);
+		--sidebar-accent: color-mix(in oklab, var(--sidebar-bg), white 6%);
+		--sidebar-accent-text: var(--text);
+		--sidebar-border: color-mix(in oklab, var(--sidebar-bg), white 12%);
+		--sidebar-focus-ring: color-mix(in oklab, var(--prime), cyan 25%);
+
+		--rounded-smallest: 0.35rem;
+		--rounded-small: 0.5rem;
+		--rounded: 0.75rem;
+		--rounded-big: 1rem;
+		--rounded-bigger: 1.5rem;
+
+		--font-size-smaller: 0.75rem;
+		--font-size-small: 0.875rem;
+		--font-size: 1rem;
+		--font-size-big: 1.125rem;
+		--font-size-bigger: 1.25rem;
+		--font-size-huge: 1.5rem;
+		--font-size-grand: 1.875rem;
+		--font-size-hero: 2.25rem;
+		--font-size-display: 3rem;
+
+		--padding-smaller: 0.25rem;
+		--padding-small: 0.5rem;
+		--padding-smallish: 0.75rem;
+		--padding: 1rem;
+		--padding-bigish: 1.25rem;
+		--padding-big: 1.5rem;
+		--padding-bigger: 2rem;
+		--padding-huge: 2.5rem;
+		--padding-grand: 3rem;
+		--padding-hero: 4rem;
+		--padding-jumbo: 5rem;
+		--padding-colossal: 6rem;
+
+		--shadow-small: 0 1px 2px color-mix(in oklab, transparent, black 15%);
+		--shadow: 0 6px 16px color-mix(in oklab, transparent, black 25%);
+		--shadow-big: 0 12px 30px color-mix(in oklab, transparent, black 35%);
+		--shadow-bigger: 0 20px 60px color-mix(in oklab, transparent, black 45%);
+
+		--anim-fast: 120ms;
+		--anim: 240ms;
+		--anim-slow: 420ms;
+
+		--font-primary: "Alan Sans", "Inter", "Segoe UI", sans-serif;
+		--font-tech: "SFMono-Regular", "JetBrains Mono", "Consolas", monospace;
+
+		--header-size: 4rem;
+
+		--bg-gradient:
+			radial-gradient(
+				800px 500px at 15% -10%,
+				color-mix(in oklab, var(--bg-secondary), transparent 55%),
+				transparent 65%
+			),
+			radial-gradient(
+				900px 600px at 90% -20%,
+				color-mix(in oklab, var(--bg-accent), transparent 65%),
+				transparent 70%
+			);
+	}
+
+	:root {
+		color-scheme: light dark;
+	}
+
+	:root.dark {
+		color-scheme: dark;
+	}
+
+	:root.light {
+		color-scheme: light;
 	}
 }
 
@@ -37,33 +141,20 @@
 		box-sizing: border-box;
 
 		scrollbar-width: thin;
-		scrollbar-color: #2a335a transparent;
+		scrollbar-color:
+			color-mix(in oklab, var(--text), transparent 60%)
+			transparent;
 	}
-
-	::-webkit-scrollbar { width: 4px; }
-	::-webkit-scrollbar-track { background: transparent; }
-	::-webkit-scrollbar-thumb {
-		background: #2a335a;
-		border-radius: 1em;
-	}
-	::-webkit-scrollbar-thumb:hover { background: #3b4a85; }
 
 	a {
-		color: var(--link);
+		color: var(--prime);
 		text-decoration: none;
+		transition: color var(--anim-fast) ease;
+	}
 
-		&:visited {
-			color: color-mix(in srgb, var(--link), #8b5cf6 30%);
-		}
-
-		&:is(:hover, :focus-visible) {
-			color: color-mix(in srgb, var(--link), white 15%);
-			text-decoration: underline;
-		}
-
-		&:active {
-			color: color-mix(in srgb, var(--link), white 40%);
-		}
+	a:is(:hover, :focus-visible) {
+		color: color-mix(in oklab, var(--prime), black 15%);
+		text-decoration: underline;
 	}
 }
 
@@ -73,28 +164,25 @@
 	}
 
 	html {
-		font-family: "Inter", "Alan Sans", system-ui, sans-serif;
-		font-size: 12px;
-		color: #e5e7eb;
-
-		--bgcover: color-mix(in lch, transparent, var(--bg) 88%);
+		font-family: var(--font-primary);
+		font-size: var(--root-font-size);
+		color: var(--text);
 		background:
-			linear-gradient(to bottom, var(--bgcover), var(--bgcover)),
-			var(--bg) url("/assets/bg.webp");
-		background-repeat: repeat;
-		text-shadow: none;
+			var(--bg-gradient),
+			var(--bg);
+		background-attachment: fixed;
 	}
 }
 
 @layer page {
 	body {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		color: var(--text-main);
-		font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+		min-height: 100%;
+		color: var(--text);
+		background: transparent;
 	}
 
 	shrimple-app {
+		display: block;
+		min-height: 100%;
 	}
 }
