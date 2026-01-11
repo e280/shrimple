@@ -16,7 +16,7 @@ export const ProvidersView = view(use => () => {
 				<h2>Auth providers 🐟</h2>
 				<p class="subtitle" x-muted>Flip 'em on, flip 'em off. It's that shrimple.</p>
 
-				<div class="provider-grid">
+				<div class="provider-box">
 					${providers.map(provider => html`
 						<div class="provider-card">
 							<span class="provider-emoji">${provider.emoji}</span>

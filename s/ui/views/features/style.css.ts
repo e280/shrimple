@@ -19,7 +19,7 @@ export default css`@layer view {
 	.feature-grid {
 		display: grid;
 		gap: var(--padding-bigger);
-		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	}
 
 	.feature-card {

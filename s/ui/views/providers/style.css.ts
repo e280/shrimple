@@ -17,14 +17,19 @@ export default css`@layer view {
 		max-width: 32rem;
 	}
 
-	.provider-grid {
-		display: grid;
+	.provider-box {
+		display: flex;
 		gap: var(--padding);
-		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+		flex-wrap: wrap;
+		justify-content: center;
+		max-width: 800px;
+		justify-self: center;
 	}
 
 	.provider-card {
 		display: flex;
+		max-width: 500px;
+		flex: 1 1 340px;
 		align-items: center;
 		gap: var(--padding);
 		padding: var(--padding);
