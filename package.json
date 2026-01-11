@@ -1,0 +1,56 @@
+{
+	"name": "@e280/shrimple",
+	"version": "0.0.0-0",
+	"description": "shrimplest cheapest auth on the web ",
+	"license": "MIT",
+	"author": "Chase Moskal <chasemoskal@gmail.com>",
+	"type": "module",
+	"main": "./x/index.js",
+	"sideEffects": false,
+	"exports": {
+		".": "./x/index.js"
+	},
+	"files": [
+		"x",
+		"s"
+	],
+	"scripts": {
+		"build": "run-s _clean _tsc _ln _scute",
+		"_clean": "rm -rf x",
+		"_tsc": "tsc",
+		"_scute": "scute -v",
+		"start": "octo 'scute -vw' 'tsc -w' 'node --watch x/tests.test.js' 'http-server x -c-1'",
+		"_ln": "run-s _ln-s _ln-assets",
+		"_ln-s": "ln -s \"$(realpath s)\" x/s",
+		"_ln-assets": "ln -s \"$(realpath assets)\" x/assets",
+		"test": "node x/tests.test.js",
+		"test-debug": "node inspect x/tests.test.js",
+		"count": "find s -path '*/_archive' -prune -o -name '*.ts' -exec wc -l {} +"
+	},
+	"dependencies": {
+		"@e280/sly": "^0.2.0-20",
+		"@e280/strata": "^0.2.0-14",
+		"@e280/stz": "^0.2.6",
+		"lit": "^3.3.2"
+	},
+	"devDependencies": {
+		"@e280/science": "^0.1.4",
+		"@e280/scute": "^0.1.0",
+		"http-server": "^14.1.1",
+		"npm-run-all": "^4.1.5",
+		"typescript": "^5.9.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/e280/shrimple.git"
+	},
+	"bugs": {
+		"url": "https://github.com/e280/shrimple/issues"
+	},
+	"homepage": "https://github.com/e280/shrimple#readme",
+	"keywords": [
+		"auth",
+		"cheap",
+		"simple"
+	]
+}
