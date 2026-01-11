@@ -1,0 +1,17 @@
+
+@layer basics {
+	html, body {
+		height: 100%;
+	}
+
+	html {
+		font-family: var(--font-primary);
+		font-size: var(--root-font-size);
+		color: var(--text);
+		background:
+			var(--bg-gradient),
+			var(--bg);
+		background-attachment: fixed;
+	}
+}
+

@@ -25,6 +25,11 @@ export default ssg.page(import.meta.url, async orb => ({
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap" rel="stylesheet">
+		<style>${orb.inject("ui/styles/layer.css")}</style>
+		<style>${orb.inject("ui/styles/vars.css")}</style>
+		<style>${orb.inject("ui/styles/core.css")}</style>
+		<style>${orb.inject("ui/styles/basics.css")}</style>
+		<style>${orb.inject("ui/styles/page.css")}</style>
 		<meta content="app-version" value="${orb.packageVersion()}"/>
 	`,
 

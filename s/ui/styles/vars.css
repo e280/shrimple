@@ -1,0 +1,137 @@
+
+@layer vars {
+	:root {
+		--root-font-size: 16px;
+
+		--bg: light-dark(
+			hsl(195 50% 98%),
+			hsl(220 25% 8%)
+		);
+
+		--text: light-dark(
+			hsl(220 25% 15%),
+			hsl(195 50% 95%)
+		);
+
+		--bg-card: light-dark(
+			hsl(0 0% 100%),
+			hsl(220 25% 12%)
+		);
+
+		--bg-popover: var(--bg-card);
+
+		--e280: #27ff23;
+
+		--prime: hsl(12 85% 60%);
+		--prime-text: hsl(0 0% 100%);
+
+		--danger: light-dark(
+			hsl(0 84% 60%),
+			hsl(0 62% 30%)
+		);
+		--danger-text: hsl(0 0% 100%);
+
+		--text-strong: color-mix(in oklab, transparent, var(--text) 90%);
+		--text-muted: color-mix(in oklab, transparent, var(--text) 60%);
+		--text-weaker: color-mix(in oklab, transparent, var(--text) 35%);
+
+		--text-card: var(--text);
+		--text-popover: var(--text);
+
+		--text-secondary: color-mix(in oklab, var(--text), var(--prime) 35%);
+		--text-accent: color-mix(in oklab, var(--text), var(--prime) 55%);
+
+		--bg-muted: color-mix(in oklab, var(--bg), var(--text) 4%);
+		--bg-secondary: color-mix(in oklab, var(--bg), var(--prime) 6%);
+		--bg-accent: color-mix(in oklab, var(--bg), var(--prime) 12%);
+
+		--border: color-mix(in oklab, var(--bg), var(--text) 15%);
+		--input: color-mix(in oklab, var(--bg), var(--text) 18%);
+		--focus-ring: color-mix(in oklab, var(--prime), white 25%);
+
+		--tier-shrimp: hsl(12 85% 60%);
+		--tier-crab: hsl(25 90% 55%);
+		--tier-lobster: hsl(0 75% 50%);
+		--tier-whale: hsl(210 80% 55%);
+
+		--bg-code: color-mix(in oklab, var(--bg), black 12%);
+		--text-code: color-mix(in oklab, var(--text), white 10%);
+
+		--sidebar-bg: color-mix(in oklab, var(--bg), black 6%);
+		--sidebar-text: var(--text);
+		--sidebar-prime: var(--prime);
+		--sidebar-prime-text: var(--prime-text);
+		--sidebar-accent: color-mix(in oklab, var(--sidebar-bg), white 6%);
+		--sidebar-accent-text: var(--text);
+		--sidebar-border: color-mix(in oklab, var(--sidebar-bg), white 12%);
+		--sidebar-focus-ring: color-mix(in oklab, var(--prime), cyan 25%);
+
+		--rounded-smallest: 0.35em;
+		--rounded-small: 0.5em;
+		--rounded: 0.75em;
+		--rounded-big: 1em;
+		--rounded-bigger: 1.5em;
+
+		--font-size-smaller: 0.75em;
+		--font-size-small: 0.875em;
+		--font-size: 1em;
+		--font-size-big: 1.125em;
+		--font-size-bigger: 1.25em;
+		--font-size-huge: 1.5em;
+		--font-size-grand: 1.875em;
+		--font-size-hero: 2.25em;
+		--font-size-display: 3em;
+
+		--padding-smaller: 0.25em;
+		--padding-small: 0.5em;
+		--padding-smallish: 0.75em;
+		--padding: 1em;
+		--padding-bigish: 1.25em;
+		--padding-big: 1.5em;
+		--padding-bigger: 2em;
+		--padding-huge: 2.5em;
+		--padding-grand: 3em;
+		--padding-hero: 4em;
+		--padding-jumbo: 5em;
+		--padding-colossal: 6em;
+
+		--shadow-small: 0 1px 2px color-mix(in oklab, transparent, black 15%);
+		--shadow: 0 6px 16px color-mix(in oklab, transparent, black 25%);
+		--shadow-big: 0 12px 30px color-mix(in oklab, transparent, black 35%);
+		--shadow-bigger: 0 20px 60px color-mix(in oklab, transparent, black 45%);
+
+		--anim-fast: 120ms;
+		--anim: 240ms;
+		--anim-slow: 420ms;
+
+		--font-primary: "Alan Sans", "Inter", "Segoe UI", sans-serif;
+		--font-tech: "SFMono-Regular", "JetBrains Mono", "Consolas", monospace;
+
+		--header-size: 4em;
+
+		--bg-gradient:
+			radial-gradient(
+				800px 500px at 15% -10%,
+				color-mix(in oklab, var(--bg-secondary), transparent 55%),
+				transparent 65%
+			),
+			radial-gradient(
+				900px 600px at 90% -20%,
+				color-mix(in oklab, var(--bg-accent), transparent 65%),
+				transparent 70%
+			);
+	}
+
+	:root {
+		color-scheme: light dark;
+	}
+
+	:root.dark {
+		color-scheme: dark;
+	}
+
+	:root.light {
+		color-scheme: light;
+	}
+}
+
