@@ -31,7 +31,7 @@
 		"@e280/sly": "^0.2.0-20",
 		"@e280/strata": "^0.2.0-14",
 		"@e280/stz": "^0.2.6",
-		"lit": "^3.3.1"
+		"lit": "^3.3.2"
 	},
 	"devDependencies": {
 		"@e280/scute": "^0.1.0",
@@ -48,6 +48,8 @@
 	},
 	"homepage": "https://github.com/e280/shrimple#readme",
 	"keywords": [
-		"auth", "cheap", "simple"
+		"auth",
+		"cheap",
+		"simple"
 	]
 }
