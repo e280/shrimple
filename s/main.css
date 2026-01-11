@@ -67,34 +67,34 @@
 		--sidebar-border: color-mix(in oklab, var(--sidebar-bg), white 12%);
 		--sidebar-focus-ring: color-mix(in oklab, var(--prime), cyan 25%);
 
-		--rounded-smallest: 0.35rem;
-		--rounded-small: 0.5rem;
-		--rounded: 0.75rem;
-		--rounded-big: 1rem;
-		--rounded-bigger: 1.5rem;
+		--rounded-smallest: 0.35em;
+		--rounded-small: 0.5em;
+		--rounded: 0.75em;
+		--rounded-big: 1em;
+		--rounded-bigger: 1.5em;
 
-		--font-size-smaller: 0.75rem;
-		--font-size-small: 0.875rem;
-		--font-size: 1rem;
-		--font-size-big: 1.125rem;
-		--font-size-bigger: 1.25rem;
-		--font-size-huge: 1.5rem;
-		--font-size-grand: 1.875rem;
-		--font-size-hero: 2.25rem;
-		--font-size-display: 3rem;
+		--font-size-smaller: 0.75em;
+		--font-size-small: 0.875em;
+		--font-size: 1em;
+		--font-size-big: 1.125em;
+		--font-size-bigger: 1.25em;
+		--font-size-huge: 1.5em;
+		--font-size-grand: 1.875em;
+		--font-size-hero: 2.25em;
+		--font-size-display: 3em;
 
-		--padding-smaller: 0.25rem;
-		--padding-small: 0.5rem;
-		--padding-smallish: 0.75rem;
-		--padding: 1rem;
-		--padding-bigish: 1.25rem;
-		--padding-big: 1.5rem;
-		--padding-bigger: 2rem;
-		--padding-huge: 2.5rem;
-		--padding-grand: 3rem;
-		--padding-hero: 4rem;
-		--padding-jumbo: 5rem;
-		--padding-colossal: 6rem;
+		--padding-smaller: 0.25em;
+		--padding-small: 0.5em;
+		--padding-smallish: 0.75em;
+		--padding: 1em;
+		--padding-bigish: 1.25em;
+		--padding-big: 1.5em;
+		--padding-bigger: 2em;
+		--padding-huge: 2.5em;
+		--padding-grand: 3em;
+		--padding-hero: 4em;
+		--padding-jumbo: 5em;
+		--padding-colossal: 6em;
 
 		--shadow-small: 0 1px 2px color-mix(in oklab, transparent, black 15%);
 		--shadow: 0 6px 16px color-mix(in oklab, transparent, black 25%);
@@ -108,7 +108,7 @@
 		--font-primary: "Alan Sans", "Inter", "Segoe UI", sans-serif;
 		--font-tech: "SFMono-Regular", "JetBrains Mono", "Consolas", monospace;
 
-		--header-size: 4rem;
+		--header-size: 4em;
 
 		--bg-gradient:
 			radial-gradient(

@@ -15,7 +15,7 @@ export default ssg.page(import.meta.url, async orb => ({
 	socialCard: {
 		title,
 		description,
-		themeColor: "#A1C33F",
+		themeColor: "#f06542",
 		siteName: domain,
 		image: `https://${domain}${favicon}`,
 	},
