@@ -6,6 +6,7 @@ import styleCss from "./style.css.js"
 
 import {HomeView} from "../pages/home/view.js"
 import {AppsView} from "../pages/apps/view.js"
+import {HeaderView} from "../views/header/view.js"
 import {FooterView} from "../views/footer/view.js"
 import {NotFoundView} from "../views/not-found/view.js"
 
@@ -23,9 +24,13 @@ export class ShrimpleApp extends view.component(use => {
 	use.mount(() => () => router.dispose())
 
 	return html`
-		<div class="app-shell">
-			${router.render()}
+		<div class=shell>
+			${HeaderView()}
+			<main>
+				${router.render()}
+			</main>
 			${FooterView()}
 		</div>
 	`
 }) {}
+
