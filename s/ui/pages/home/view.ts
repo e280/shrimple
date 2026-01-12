@@ -6,7 +6,6 @@ import styleCss from "./style.css.js"
 
 import {HeroView} from "../../views/hero/view.js"
 import {HeaderView} from "../../views/header/view.js"
-import {FooterView} from "../../views/footer/view.js"
 import {PricingView} from "../../views/pricing/view.js"
 import {FeaturesView} from "../../views/features/view.js"
 import {ProvidersView} from "../../views/providers/view.js"
@@ -23,7 +22,6 @@ export const HomeView = view(use => () => {
 				${FeaturesView()}
 				${ProvidersView()}
 				${PricingView()}
-				${FooterView()}
 			</main>
 		</div>
 	
