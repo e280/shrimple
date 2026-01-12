@@ -24,7 +24,7 @@ export const ProvidersView = view(use => () => {
 								<div class="provider-title">
 									<h3>${provider.name}</h3>
 									${provider.free ? html`
-										<span class="pill free">FREE</span>
+										<span x-pill class="free">FREE</span>
 									` : null}
 								</div>
 								<p x-muted>${provider.description}</p>
