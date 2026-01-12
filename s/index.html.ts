@@ -9,7 +9,6 @@ const description = "shrimplest cheapest auth on the web "
 export default ssg.page(import.meta.url, async orb => ({
 	title,
 	js: "main.bundle.min.js",
-	css: "main.css",
 	dark: true,
 
 	socialCard: {
