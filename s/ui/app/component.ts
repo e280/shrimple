@@ -10,7 +10,7 @@ import {HeaderView} from "../views/header/view.js"
 import {FooterView} from "../views/footer/view.js"
 import {NotFoundView} from "../views/not-found/view.js"
 
-export class ShrimpleApp extends view.component(use => {
+export class ShrimpleShell extends view.component(use => {
 	use.css(themeCss, styleCss)
 
 	const router = use.once(() => new spa.Router({
@@ -24,11 +24,13 @@ export class ShrimpleApp extends view.component(use => {
 	use.mount(() => () => router.dispose())
 
 	return html`
-		<div class=shell>
+		<div class=plate>
 			${HeaderView()}
+
 			<main>
 				${router.render()}
 			</main>
+
 			${FooterView()}
 		</div>
 	`

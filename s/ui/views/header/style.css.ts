@@ -5,6 +5,8 @@ export default css`@layer view {
 	.site-header {
 		position: fixed;
 		inset: 0 0 auto 0;
+		max-width: var(--page-width);
+		margin: auto;
 		z-index: 40;
 		height: var(--header-size);
 		background: color-mix(in oklab, transparent, var(--bg) 85%);
@@ -16,7 +18,7 @@ export default css`@layer view {
 		height: 100%;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: start;
 		gap: var(--padding-big);
 	}
 
@@ -55,6 +57,7 @@ export default css`@layer view {
 		display: flex;
 		align-items: center;
 		gap: var(--padding-big);
+		flex: 1 1 auto;
 	}
 
 	.nav-link {

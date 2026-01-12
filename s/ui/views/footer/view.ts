@@ -5,6 +5,7 @@ import themeCss from "../../theme.css.js"
 import styleCss from "./style.css.js"
 
 export const FooterView = view(use => () => {
+	use.name("footer")
 	use.css(themeCss, styleCss)
 
 	const year = new Date().getFullYear()

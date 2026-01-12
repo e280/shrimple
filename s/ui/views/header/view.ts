@@ -11,6 +11,7 @@ import {NavButtons, NavLinks} from "./renderers/nav-buttons.js"
 const THEME_KEY = "shrimple-theme"
 
 export const HeaderView = view(use => () => {
+	use.name("header")
 	use.css(themeCss, styleCss)
 
 	const $theme = use.signal<Theme>("light")
