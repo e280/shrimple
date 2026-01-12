@@ -80,7 +80,7 @@ export default css`@layer view {
 	}
 
 	.menu-toggle {
-		display: none;
+		display: flex;
 		padding: 0;
 		width: 2.5rem;
 		height: 2.5rem;
@@ -188,16 +188,6 @@ export default css`@layer view {
 		}
 	}
 
-	.sign-in {
-		display: none;
-	}
-
-	@media (min-width: 640px) {
-		.sign-in {
-			display: inline-flex;
-		}
-	}
-
 	@media (max-width: 720px) {
 		.nav {
 			display: none;
@@ -208,10 +198,6 @@ export default css`@layer view {
 		}
 
 		.mobile-actions {
-			display: inline-flex;
-		}
-
-		.menu-toggle {
 			display: inline-flex;
 		}
 	}
