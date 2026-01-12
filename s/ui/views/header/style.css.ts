@@ -18,7 +18,7 @@ export default css`@layer view {
 		height: 100%;
 		display: flex;
 		align-items: center;
-		justify-content: start;
+		justify-content: space-between;
 		gap: var(--padding-big);
 	}
 
