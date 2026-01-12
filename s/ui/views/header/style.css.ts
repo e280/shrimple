@@ -26,8 +26,12 @@ export default css`@layer view {
 		gap: var(--padding-small);
 		font-weight: 700;
 		color: var(--text);
+		text-decoration: none;
 
 		&:hover {
+			.brand-text {
+				text-decoration: underline;
+			}
 			.brand-emoji {
 				transform: rotate(-8deg) scale(1.05);
 			}
