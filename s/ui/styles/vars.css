@@ -3,6 +3,8 @@
 	:root {
 		--root-font-size: 16px;
 
+		--page-width: 80em;
+
 		--bg: light-dark(
 			hsl(195 50% 98%),
 			hsl(220 25% 8%)

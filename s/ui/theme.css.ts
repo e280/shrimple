@@ -48,7 +48,6 @@ ${cssReset}
 	}
 
 	[x-content] {
-		width: min(1100px, 100%);
 		margin: 0 auto;
 		padding: 0 var(--padding-big);
 	}

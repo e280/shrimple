@@ -38,32 +38,27 @@ export const AppsView = view(use => () => {
 	const selectedApp = $apps.value.find(app => app.id === $selectedAppId.value)
 
 	return html`
-		<div class="container">
-		<div class="apps-page">
-			${HeaderView()}
-			<div class="apps-body">
-				${$isLoggedIn.value
-					? html`
-						<div class="apps-layout">
-							${AppsSidebarView({
-								onAddApp: addApp,
-								apps: $apps.value,
-								selectedAppId: $selectedAppId.value,
-								onSelectApp: (id: string) => $selectedAppId.value = id,
-							})}
-							${selectedApp
-								? AppDetailsView({
-										app: selectedApp,
-										onUpdateApp: updateApp
-									})
-								: null
-							}
-						</div>
-					`
-					: AuthGateView({onLogin: () => $isLoggedIn.value = true})}
-			</div>
-		</div>
-	
+		<div class=plate>
+			${$isLoggedIn.value
+				? html`
+					<div class=layout>
+						${AppsSidebarView({
+							onAddApp: addApp,
+							apps: $apps.value,
+							selectedAppId: $selectedAppId.value,
+							onSelectApp: (id: string) => $selectedAppId.value = id,
+						})}
+						${selectedApp
+							? AppDetailsView({
+									app: selectedApp,
+									onUpdateApp: updateApp
+								})
+							: null
+						}
+					</div>
+				`
+				: AuthGateView({onLogin: () => $isLoggedIn.value = true})}
 		</div>
 	`
 })
+

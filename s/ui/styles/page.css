@@ -1,14 +1,34 @@
 
 @layer page {
-	body {
+	html, body {
 		min-height: 100%;
-		color: var(--text);
-		background: transparent;
 	}
 
-	shrimple-app {
-		display: block;
+	html {
+		font-size: var(--root-font-size);
+		font-family: var(--font-primary);
+
+		color: var(--text);
+
+		background:
+			var(--bg-gradient),
+			var(--bg);
+		background-attachment: fixed;
+	}
+
+	body {
+		color: var(--text);
+		background: transparent;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	shrimple-shell {
+		width: 100%;
 		min-height: 100%;
+		max-width: var(--page-width);
 	}
 }
 

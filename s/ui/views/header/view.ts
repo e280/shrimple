@@ -1,19 +1,21 @@
+
 import {html} from "lit"
 import {view} from "@e280/sly"
 
 import styleCss from "./style.css.js"
 import themeCss from "../../theme.css.js"
-import {sunIcon} from "./icons/sun.svg.js"
-import {moonIcon} from "./icons/moon.svg.js"
+import {HamburgerBtn} from "./renderers/hamburger-btn.js"
+import {Theme, ThemeToggle} from "./renderers/theme-toggle.js"
+import {NavButtons, NavLinks} from "./renderers/nav-buttons.js"
 
 const THEME_KEY = "shrimple-theme"
 
-type Theme = "light" | "dark" | "system"
-
 export const HeaderView = view(use => () => {
+	use.name("header")
 	use.css(themeCss, styleCss)
 
 	const $theme = use.signal<Theme>("light")
+	const $menuOpen = use.signal(false)
 
 	const applyTheme = (theme: Theme) => {
 		const html = document.documentElement
@@ -51,6 +53,8 @@ export const HeaderView = view(use => () => {
 		applyTheme(next)
 	}
 
+	const toggleMenuOpen = () => $menuOpen.value = !$menuOpen.value
+
 	return html`
 		<div class="container">
 		<header class="site-header">
@@ -61,39 +65,37 @@ export const HeaderView = view(use => () => {
 				</a>
 
 				<nav class="nav">
-					<a href="#/" class="nav-link">Home</a>
-					<a href="#/apps" class="nav-link">Apps</a>
+					${NavLinks()}
 				</nav>
 
 				<div class="actions">
-					<button 
-						class="theme-toggle"
-						x-button
-						data-ghost
-						data-theme=${$theme.value}
-						@click=${toggleTheme}
-						aria-label="Toggle theme">
-						${sunIcon}
-						${moonIcon}
-					</button>
-					<button
-						class="sign-in"
-						x-button
-						data-outline
-						data-size="sm"
-					>
-						Sign In
-					</button>
-					<button
-						x-button
-						data-size="sm"
-					>
-						Get Started
-					</button>
+					${ThemeToggle($theme.value, toggleTheme)}
+					${NavButtons()}
+				</div>
+
+				<div class="mobile-actions">
+					${ThemeToggle($theme.value, toggleTheme)}
+					${HamburgerBtn({
+						toggle: toggleMenuOpen,
+						isOpen: $menuOpen.value
+					})}
 				</div>
 			</div>
 		</header>
+
+		<div id="mobile-menu" class="mobile-menu" ?data-open=${$menuOpen.value}>
+			<button class="menu-backdrop" @click=${toggleMenuOpen} aria-hidden="true"></button>
+			<div class="menu-panel">
+				<nav class="menu-nav">
+					${NavLinks(toggleMenuOpen)}
+				</nav>
+				<div class="menu-actions">
+					${NavButtons(toggleMenuOpen)}
+				</div>
+			</div>
+		</div>
 	
 		</div>
 	`
 })
+

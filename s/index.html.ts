@@ -9,7 +9,6 @@ const description = "shrimplest cheapest auth on the web "
 export default ssg.page(import.meta.url, async orb => ({
 	title,
 	js: "main.bundle.min.js",
-	css: "main.css",
 	dark: true,
 
 	socialCard: {
@@ -28,12 +27,11 @@ export default ssg.page(import.meta.url, async orb => ({
 		<style>${orb.inject("ui/styles/layer.css")}</style>
 		<style>${orb.inject("ui/styles/vars.css")}</style>
 		<style>${orb.inject("ui/styles/core.css")}</style>
-		<style>${orb.inject("ui/styles/basics.css")}</style>
 		<style>${orb.inject("ui/styles/page.css")}</style>
 		<meta content="app-version" value="${orb.packageVersion()}"/>
 	`,
 
 	body: html`
-		<shrimple-app></shrimple-app>
+		<shrimple-shell></shrimple-shell>
 	`,
 }))
