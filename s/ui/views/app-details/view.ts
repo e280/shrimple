@@ -80,7 +80,7 @@ export const AppDetailsView = view(use => (props: AppDetailsProps) => {
 								<button
 									class="switch"
 									?data-on=${props.app.providers[provider.key]}
-									@click=${toggleAuthProvider}
+									@click=${() => toggleAuthProvider(provider)}
 								>
 									<span class="switch-thumb"></span>
 								</button>
