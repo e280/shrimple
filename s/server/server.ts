@@ -1,15 +1,17 @@
 
 import * as http from "http"
 import {env} from "../tools/env.js"
+import {makeApi} from "./parts/api.js"
 import {sqliteFileDb} from "./db/db.js"
-import {serveApi} from "./serve/api.js"
-import {serveHttp} from "./serve/http.js"
+import {serveHttp} from "./parts/http.js"
+import {makeRequestListener} from "@e280/renraku"
 
 const port = Number(env("SHRIMPLE_PORT"))
-const db = sqliteFileDb(env("SHRIMPLE_DB"))
+const db = await sqliteFileDb(env("SHRIMPLE_DB"))
+const api = makeRequestListener({rpc: async() => makeApi(db)})
 
 const server = new http.Server((request, response) => {
-	if (request.url === "/api") serveApi(db, request, response)
+	if (request.url === "/api") api(request, response)
 	else serveHttp(request, response)
 })
 
