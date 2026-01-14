@@ -44,16 +44,16 @@ CREATE TABLE IF NOT EXISTS apps (
 );
 
 -- indexes
-CREATE INDEX idx_providerAuthlocal_userId
+CREATE INDEX IF NOT EXISTS idx_providerAuthlocal_userId
 	ON providerAuthlocal(userId);
 
-CREATE INDEX idx_providerGoogle_userId
+CREATE INDEX IF NOT EXISTS idx_providerGoogle_userId
 	ON providerGoogle(userId);
 
-CREATE INDEX idx_eventLogin_time
+CREATE INDEX IF NOT EXISTS idx_eventLogin_time
 	ON eventLogin(time);
 
-CREATE INDEX idx_apps_userId
+CREATE INDEX IF NOT EXISTS idx_apps_userId
 	ON apps(userId);
 
 `
