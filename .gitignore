@@ -1,6 +1,7 @@
 
 /x
 /temp
+/assets
 
 /node_modules
 /yarn.lock
