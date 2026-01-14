@@ -5,7 +5,25 @@ export default css`@layer view {
 	.hero {
 		position: relative;
 		overflow: hidden;
-		padding: calc(var(--padding-colossal) + var(--header-size)) 0 var(--padding-jumbo);
+	}
+
+	.shadow {
+		position: absolute;;
+		width: 100%;
+		height: 100%;
+
+		mask-image:
+			linear-gradient(to top,    transparent, #fff 40%),
+			linear-gradient(to bottom, transparent, #fff 40%),
+			linear-gradient(to left,   transparent, #fff 40%),
+			linear-gradient(to right,  transparent, #fff 40%);
+
+		mask-composite: intersect;
+	}
+
+	video {
+		position: absolute;
+		filter: brightness(0.3);
 	}
 
 	.hero-bg {
@@ -55,6 +73,7 @@ export default css`@layer view {
 		flex-direction: column;
 		align-items: center;
 		gap: var(--padding-big);
+		padding: 9em;
 	}
 
 	.hero-brand {

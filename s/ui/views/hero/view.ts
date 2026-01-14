@@ -10,6 +10,9 @@ export const HeroView = view(use => () => {
 	return html`
 		<div class="container">
 		<section class="hero">
+			<div class=shadow>
+				<video src="/assets/ocean.mp4" muted autoplay loop></video>
+			</div>
 			<div class="hero-bg" aria-hidden="true">
 				<span class="float shrimp">🦐</span>
 				<span class="float shrimp-alt">🍤</span>
