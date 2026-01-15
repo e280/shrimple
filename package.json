@@ -20,9 +20,8 @@
 		"_tsc": "tsc",
 		"_scute": "scute -v",
 		"start": "octo 'scute -vw' 'tsc -w' 'node --watch x/tests.test.js' 'node --watch --env-file=dev.env x/server/server.js'",
-		"_ln": "run-s _ln-s _ln-assets",
+		"_ln": "run-s _ln-s",
 		"_ln-s": "ln -s \"$(realpath s)\" x/s",
-		"_ln-assets": "ln -s \"$(realpath assets)\" x/assets",
 		"test": "node x/tests.test.js",
 		"test-debug": "node inspect x/tests.test.js",
 		"count": "find s -path '*/_archive' -prune -o -name '*.ts' -exec wc -l {} +"

@@ -20,15 +20,10 @@ jobs:
     - run: npm run build -s
     - run: npm test
 
-    - name: 🦐 delete symlinks
+    - name: 🦐 move stuff around
       run: |
-        rm x/s
-        rm x/assets
-
-    - name: 🦐 moving files
-      run: |
-        mv s x/s
-        mv assets x/assets
+        rm x/s # delete symlink
+        mv s x/s # move files
 
     - name: 🦐 setup ssh
       uses: webfactory/ssh-agent@v0.9.1
