@@ -1,0 +1,53 @@
+
+name: 🐳 deploy
+
+on:
+  push:
+    tags:
+    - 'v*'
+
+jobs:
+  deploy:
+    environment: prod
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: "22"
+
+    - run: npm ci
+    - run: npm run build -s
+    - run: npm test
+
+    - name: 🦐 delete symlinks
+      run: |
+        rm x/s
+        rm x/assets
+
+    - name: 🦐 moving files
+      run: |
+        mv s x/s
+        mv assets x/assets
+
+    - name: 🦐 setup ssh
+      uses: webfactory/ssh-agent@v0.9.1
+      with:
+        ssh-private-key: ${{ secrets.SHRIMPLE_DEPLOYER_KEY }}
+
+    - name: 🦐 upload
+      run: |
+        rsync --delete -hamz \
+          --exclude "/.git" \
+          --exclude "/db" \
+          --exclude "/node_modules" \
+          -e "ssh -o StrictHostKeyChecking=no" \
+          ./ deployer@shrimple.io:/home/deployer/app/
+
+    - name: 🦐 deploy script
+      run: |
+        ssh \
+          -o StrictHostKeyChecking=no \
+          deployer@shrimple.io \
+          "/home/deployer/app/x/s/server/deploy.bash"
+

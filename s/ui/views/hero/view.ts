@@ -3,15 +3,18 @@ import {view} from "@e280/sly"
 
 import themeCss from "../../theme.css.js"
 import styleCss from "./style.css.js"
+import {stuffUrl} from "../../../tools/stuff-url.js"
 
 export const HeroView = view(use => () => {
 	use.css(themeCss, styleCss)
+
+	const videoUrl = stuffUrl("ocean.mp4")
 
 	return html`
 		<div class="container">
 		<section class="hero">
 			<div class=shadow>
-				<video src="/assets/ocean.mp4" muted autoplay loop></video>
+				<video src="${videoUrl}" muted autoplay loop></video>
 			</div>
 			<div class="hero-bg" aria-hidden="true">
 				<span class="float shrimp">🦐</span>
