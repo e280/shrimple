@@ -2,16 +2,11 @@
 import {css} from "lit"
 import {cssReset} from "@e280/sly"
 export default css`
-@layer reset, underlay, view, overlay;
+@layer reset, core, underlay, view, overlay;
 
 ${cssReset}
 
-@layer underlay {
-	:host {
-		color: var(--text);
-		font-family: var(--font-primary);
-	}
-
+@layer core {
 	*:focus-visible {
 		outline: 0.2em solid var(--focus);
 		outline-offset: 0.2em;
@@ -50,6 +45,13 @@ ${cssReset}
 		&:active {
 			color: color-mix(in oklab, transparent, var(--prime) 60%);
 		}
+	}
+}
+
+@layer underlay {
+	:host {
+		color: var(--text);
+		font-family: var(--font-primary);
 	}
 
 	[x-content] {

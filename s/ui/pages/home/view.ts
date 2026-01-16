@@ -34,26 +34,11 @@ export const HomeView = view(use => () => {
 
 			<div class=actions>
 				<a x-btn=subtle href="https://github.com/e280/shrimple#readme">readme</a>
-				<button x-btn>start right now</button>
+				<a x-btn href="#/apps">start right now</a>
 			</div>
 		</section>
 
 		<section class=featurettes>
-			<section class=quote>
-				<video src="${stuffUrl("ocean.mp4")}" crossorigin="anonymous" muted autoplay loop></video>
-				<figure class=text>
-					<blockquote>
-						“everything should be made as shrimple as possible,
-						<br/>
-						but not shrimpler.”
-					</blockquote>
-					<figcaption>— albert einstein</figcaption>
-				</figure>
-				<figure class=portrait>
-					<img src="${stuffUrl("einstein.webp")}" alt="" crossorigin="anonymous"/>
-				</figure>
-			</section>
-
 			<section class=philosophy>
 				<div class=box>
 					<section>
@@ -71,6 +56,21 @@ export const HomeView = view(use => () => {
 						<p>the good one.</p>
 					</section>
 				</div>
+			</section>
+
+			<section class=quote>
+				<video src="${stuffUrl("ocean.mp4")}" crossorigin="anonymous" muted autoplay loop></video>
+				<figure class=text>
+					<blockquote>
+						“everything should be made as shrimple as possible,
+						<br/>
+						but not shrimpler.”
+					</blockquote>
+					<figcaption>— albert einstein</figcaption>
+				</figure>
+				<figure class=portrait>
+					<img src="${stuffUrl("einstein.webp")}" alt="" crossorigin="anonymous"/>
+				</figure>
 			</section>
 
 			<section class="providers">

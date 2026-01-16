@@ -76,6 +76,8 @@ section.philosophy {
 	flex-direction: column;
 	gap: 3em;
 
+	font-size: 1.2em;
+
 	width: 100%;
 	text-align: center;
 
@@ -86,10 +88,10 @@ section.philosophy {
 	.box {
 		display: flex;
 		flex-wrap: wrap;
+		gap: 2em;
 
 		> section {
 			flex: 1 0 10em;
-			padding: 1em;
 
 			h3 > span {
 				color: var(--prime);
