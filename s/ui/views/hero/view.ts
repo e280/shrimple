@@ -14,7 +14,7 @@ export const HeroView = view(use => () => {
 		<div class="container">
 		<section class="hero">
 			<div class=shadow>
-				<video src="${videoUrl}" muted autoplay loop></video>
+				<video src="${videoUrl}" crossorigin="anonymous" muted autoplay loop></video>
 			</div>
 			<div class="hero-bg" aria-hidden="true">
 				<span class="float shrimp">🦐</span>
