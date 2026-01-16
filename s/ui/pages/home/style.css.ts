@@ -2,16 +2,16 @@
 import {css} from "lit"
 export default css`@layer view {
 
-:host {
+.featurettes {
 	container-type: inline-size;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 4em;
-}
+	gap: 10em;
 
-:host > section {
-	padding: 1em;
+	> section {
+		padding: 1em;
+	}
 }
 
 section.title {
@@ -56,8 +56,8 @@ section.title {
 	}
 
 	h3 {
-		font-weight: 1em;
 		opacity: 0.5;
+		font-size: 1.5em;
 		font-family: serif;
 		font-weight: normal;
 		font-style: italic;
@@ -102,6 +102,8 @@ section.quote {
 	display: flex;
 	position: relative;
 
+	width: 100%;
+
 	overflow: clip;
 	padding: 0;
 	background: #3332;
@@ -134,13 +136,13 @@ section.quote {
 		flex-direction: column;
 		justify-content: center;
 
+		font-size: 2em;
 		padding: 1em;
-		font-size: 1.5em;
 		flex: 1 1 auto;
 		gap: 0.5em;
 
 		blockquote {
-			text-align: right;
+			text-align: left;
 		}
 
 		figcaption {
@@ -158,6 +160,87 @@ section.quote {
 		flex: 0 0 auto;
 		mask-image: linear-gradient(to right, transparent 5%, black 50%);
 		-webkit-mask-image: linear-gradient(to right, transparent 5%, black 50%);
+	}
+}
+
+section.providers {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h2 {
+		text-align: center;
+		font-size: var(--font-size-grand);
+		margin-bottom: var(--padding-smallish);
+	}
+
+	.subtitle {
+		text-align: center;
+		margin: 0 auto var(--padding-huge);
+		max-width: 32rem;
+	}
+
+	.provider-box {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		gap: 0.8em;
+	}
+
+	.provider-card {
+		display: flex;
+		align-items: center;
+		gap: var(--padding);
+		padding: var(--padding);
+
+		border-radius: var(--rounded-big);
+		border-top: 0.15em solid #fff4;
+		background: #3b649945;
+		box-shadow: var(--shadow);
+	}
+
+	.provider-emoji {
+		font-size: 2rem;
+	}
+
+	.provider-info {
+		flex: 1;
+	}
+
+	.provider-title {
+		display: flex;
+		align-items: center;
+		gap: var(--padding-small);
+
+		h3 {
+			margin: 0;
+			font-size: 1.5em;
+		}
+	}
+
+	.free {
+		background: color-mix(in oklab, transparent, var(--tier-shrimp) 15%);
+		color: var(--tier-shrimp);
+	}
+
+	.toggle {
+		width: 2.8rem;
+		height: 1.5rem;
+		border-radius: 999px;
+		background: var(--prime);
+		padding: 0.2rem;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		.toggle-dot {
+			width: 1.1rem;
+			height: 1.1rem;
+			border-radius: 999px;
+			background: white;
+			box-shadow: var(--shadow-small);
+		}
 	}
 }
 
