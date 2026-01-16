@@ -111,6 +111,7 @@ section.quote {
 	video {
 		opacity: 0.2;
 		position: absolute;
+		z-index: -1;
 		inset: 0;
 		width: 100%;
 		height: 100%;
@@ -143,16 +144,14 @@ section.quote {
 		}
 
 		figcaption {
-			color: var(--prime);
 			padding-left: 1em;
 			font-style: italic;
-			opacity: 0.7;
 			text-align: right;
 		}
 	}
 
 	img {
-		opacity: 0.5;
+		opacity: 0.2;
 		width: 25cqw;
 		flex: 0 0 auto;
 		mask-image: linear-gradient(to right, transparent 5%, black 50%);

@@ -21,7 +21,7 @@ ${cssReset}
 		box-sizing: border-box;
 	}
 
-	::selection, ::-moz-selection {
+	::selection, ::-moz-selection, ::-webkit-selection {
 		color: white;
 		background: var(--selection);
 	}
