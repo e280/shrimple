@@ -106,9 +106,6 @@ section.quote {
 
 	overflow: clip;
 	padding: 0;
-	background: #3332;
-	background: linear-gradient(to bottom, #3332, transparent);
-	border-top: 1px solid #fff2;
 	border-radius: 1.5em;
 
 	video {
