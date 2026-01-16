@@ -13,12 +13,17 @@ ${cssReset}
 	}
 
 	*:focus-visible {
-		outline: 0.2em solid var(--focus-ring);
+		outline: 0.2em solid var(--focus);
 		outline-offset: 0.2em;
 	}
 
 	* {
 		box-sizing: border-box;
+	}
+
+	::selection, ::-moz-selection {
+		color: white;
+		background: var(--selection);
 	}
 
 	button,

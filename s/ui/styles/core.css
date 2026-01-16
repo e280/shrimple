@@ -11,6 +11,11 @@
 			transparent;
 	}
 
+	::selection, ::-moz-selection {
+		color: white;
+		background: var(--selection);
+	}
+
 	a {
 		color: var(--prime);
 		text-decoration: none;

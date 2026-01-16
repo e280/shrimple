@@ -25,11 +25,11 @@ export const HomeView = view(use => () => {
 			<div>
 				<h2>
 					<span>auth.</span>
-					<span>one way.</span>
+					<span>easy.</span>
 					<span>done.</span>
 				</h2>
 				<h3>
-					the deadass shrimplest auth service ever made.
+					deadass shrimplest login system for web apps
 				</h3>
 			</div>
 

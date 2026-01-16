@@ -15,11 +15,14 @@ export default css`@layer view {
 	}
 }
 
-[view="header"] {
-}
+[view="header"] {}
 
 main {
-	padding-top: var(--header-size);
+	&::before {
+		content: "";
+		display: block;
+		height: var(--header-size);
+	}
 }
 
 [view="footer"] {

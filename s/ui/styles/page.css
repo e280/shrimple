@@ -9,11 +9,11 @@
 		font-family: var(--font-primary);
 
 		color: var(--text);
+		text-shadow: var(--text-shadow);
 
 		background:
-			var(--bg-gradient),
-			var(--bg);
-		background-attachment: fixed;
+			radial-gradient(circle at center, #0a2c4033 10%, #09131fcc 80%) fixed,
+			url("https://stuff.sfo3.cdn.digitaloceanspaces.com/shrimple/bg.webp") center / cover fixed #000;
 	}
 
 	body {

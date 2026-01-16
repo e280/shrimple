@@ -6,14 +6,17 @@
 
 		--bg: hsl(220 25% 8%);
 		--text: hsl(195 50% 95%);
+		--text-shadow: 0.1em 0.3em 0.4em #0008;
 
 		--bg-card: hsl(220 25% 12%);
 		--bg-popover: var(--bg-card);
 
-		--e280: #27ff23;
-
 		--prime: #fe6907;
 		--prime-text: hsl(0 0% 100%);
+		--e280: #27ff23;
+
+		--selection: color-mix(in oklch, transparent, var(--prime) 80%);
+		--focus: cyan;
 
 		--danger: hsl(0 62% 30%);
 		--danger-text: hsl(0 0% 100%);
@@ -34,7 +37,6 @@
 
 		--border: color-mix(in oklab, var(--bg), var(--text) 15%);
 		--input: color-mix(in oklab, var(--bg), var(--text) 18%);
-		--focus-ring: color-mix(in oklab, var(--prime), white 25%);
 
 		--tier-shrimp: hsl(12 85% 60%);
 		--tier-crab: hsl(25 90% 55%);

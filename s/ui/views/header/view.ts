@@ -20,7 +20,7 @@ export const HeaderView = view(use => () => {
 				<a href="#/apps">apps</a>
 			</nav>
 
-			<button x-button>login</button>
+			<button x-btn>login</button>
 		</header>
 	`
 })

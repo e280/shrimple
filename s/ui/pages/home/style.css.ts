@@ -17,11 +17,23 @@ export default css`@layer view {
 section.title {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	gap: 4em;
 
-	padding-top: 4rem;
 	font-size: min(1em, 3vw);
+	height: calc(100vh - var(--header-size));
+	padding-top: 4rem;
 	text-align: center;
+
+	&::before, &::after {
+		content: "";
+		display: block;
+		flex: 1 1 auto;
+	}
+
+	&::after {
+		flex: 2 1 auto;
+	}
 
 	img {
 		width: 100%;
@@ -40,12 +52,13 @@ section.title {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		gap: 1em;
+		gap: 0.8em;
 	}
 
 	h3 {
 		font-weight: 1em;
 		opacity: 0.5;
+		font-family: serif;
 		font-weight: normal;
 		font-style: italic;
 	}
