@@ -12,13 +12,10 @@
 
 		--e280: #27ff23;
 
-		--prime: hsl(12 85% 60%);
+		--prime: #fe6907;
 		--prime-text: hsl(0 0% 100%);
 
-		--danger: light-dark(
-			hsl(0 84% 60%),
-			hsl(0 62% 30%)
-		);
+		--danger: hsl(0 62% 30%);
 		--danger-text: hsl(0 0% 100%);
 
 		--text-strong: color-mix(in oklab, transparent, var(--text) 90%);

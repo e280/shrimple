@@ -14,7 +14,7 @@ export const HeaderView = view(use => () => {
 		<header>
 			<nav>
 				<a class="brand" href="#/">
-					<img src="${stuffUrl("shrimp.png")}" crossorigin="anonymous"/>
+					<img src="${stuffUrl("shrimp.png")}" alt="" crossorigin="anonymous"/>
 				</a>
 				<a href="#/">home</a>
 				<a href="#/apps">apps</a>
