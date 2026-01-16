@@ -35,3 +35,4 @@ export default ssg.page(import.meta.url, async orb => ({
 		<shrimple-shell></shrimple-shell>
 	`,
 }))
+
