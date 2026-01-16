@@ -2,24 +2,12 @@
 @layer vars {
 	:root {
 		--root-font-size: 16px;
-
 		--page-width: 80em;
 
-		--bg: light-dark(
-			hsl(195 50% 98%),
-			hsl(220 25% 8%)
-		);
+		--bg: hsl(220 25% 8%);
+		--text: hsl(195 50% 95%);
 
-		--text: light-dark(
-			hsl(220 25% 15%),
-			hsl(195 50% 95%)
-		);
-
-		--bg-card: light-dark(
-			hsl(0 0% 100%),
-			hsl(220 25% 12%)
-		);
-
+		--bg-card: hsl(220 25% 12%);
 		--bg-popover: var(--bg-card);
 
 		--e280: #27ff23;
@@ -122,18 +110,6 @@
 				color-mix(in oklab, var(--bg-accent), transparent 65%),
 				transparent 70%
 			);
-	}
-
-	:root {
-		color-scheme: light dark;
-	}
-
-	:root.dark {
-		color-scheme: dark;
-	}
-
-	:root.light {
-		color-scheme: light;
 	}
 }
 
