@@ -27,7 +27,7 @@ export const HomeView = view(use => () => {
 					<span>easy.</span>
 					<span>done.</span>
 				</h2>
-				<h3>
+				<h3 class=chill>
 					shrimplest login system for the web
 				</h3>
 			</div>
@@ -40,42 +40,32 @@ export const HomeView = view(use => () => {
 
 		<section class=featurettes>
 			<section class=philosophy>
+				<span class=emoji>🐚</span>
+				<h2>shrimple is so simple!</h2>
+				<h3 class=chill>we're obsessed with shrimplicity</h3>
+
 				<div class=box>
 					<section>
-						<h3><span>✓ </span> keep it shrimple, stupid.</h3>
-						<p>we authenticate logins, and do nothing else.</p>
+						<h3><span>✓ </span> keep it shrimple, stupid</h3>
+						<p>authentication, nothing else</p>
 					</section>
 
 					<section>
-						<h3><span>✓ </span> minimalist config.</h3>
-						<p>we're obsessed with shrimplicity.</p>
+						<h3><span>✓ </span> open source</h3>
+						<p>mit licensed</p>
 					</section>
 
 					<section>
-						<h3><span>✓ </span> only works one way.</h3>
-						<p>the good one.</p>
+						<h3><span>✓ </span> only works one way</h3>
+						<p>the good way</p>
 					</section>
 				</div>
 			</section>
 
-			<section class=quote>
-				<video src="${stuffUrl("ocean.mp4")}" crossorigin="anonymous" muted autoplay loop></video>
-				<figure class=text>
-					<blockquote>
-						“everything should be made as shrimple as possible,
-						<br/>
-						but not shrimpler.”
-					</blockquote>
-					<figcaption>— albert einstein</figcaption>
-				</figure>
-				<figure class=portrait>
-					<img src="${stuffUrl("einstein.webp")}" alt="" crossorigin="anonymous"/>
-				</figure>
-			</section>
-
 			<section class="providers">
-				<h2>🐟 shrimple providers</h2>
-				<p class="subtitle" x-muted>flip 'em on, flip 'em off</p>
+				<span class=emoji>🐠</span>
+				<h2>shrimple providers</h2>
+				<h3 class=chill>flip 'em on, flip 'em off</h3>
 
 				<div class="provider-box">
 					${providers.map(provider => html`
@@ -96,6 +86,21 @@ export const HomeView = view(use => () => {
 						</div>
 					`)}
 				</div>
+			</section>
+
+			<section class=quote>
+				<video src="${stuffUrl("ocean.mp4")}" crossorigin="anonymous" muted autoplay loop></video>
+				<figure class=text>
+					<blockquote>
+						“everything should be made as shrimple as possible,
+						<br/>
+						but not shrimpler.”
+					</blockquote>
+					<figcaption>— albert einstein</figcaption>
+				</figure>
+				<figure class=portrait>
+					<img src="${stuffUrl("einstein.webp")}" alt="" crossorigin="anonymous"/>
+				</figure>
 			</section>
 
 			${PricingView()}

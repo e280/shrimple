@@ -1,13 +1,13 @@
 import {html} from "lit"
+import {hex} from "@e280/stz"
 import {view} from "@e280/sly"
 
 import themeCss from "../../theme.css.js"
 import styleCss from "./style.css.js"
 
-import {HeaderView} from "../../views/header/view.js"
 import {AuthGateView} from "../../views/auth-gate/view.js"
-import {AppsSidebarView} from "../../views/apps-sidebar/view.js"
 import {AppDetailsView} from "../../views/app-details/view.js"
+import {AppsSidebarView} from "../../views/apps-sidebar/view.js"
 
 import {mockApps} from "./mocks.js"
 import type {AppData} from "./types.js"
@@ -23,7 +23,7 @@ export const AppsView = view(use => () => {
 		const newApp: AppData = {
 			id: String(Date.now()),
 			name: "New App",
-			appId: `app_${Math.random().toString(36).slice(2, 14)}`,
+			appId: hex.random(),
 			origins: "",
 			providers: {authlocal: true, google: false, apple: false, microsoft: false},
 		}

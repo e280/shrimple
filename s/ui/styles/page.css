@@ -5,7 +5,7 @@
 	}
 
 	html {
-		font-size: var(--root-font-size);
+		font-size: clamp(12px, 2vw, 21px);
 		font-family: var(--font-primary);
 
 		color: var(--text);

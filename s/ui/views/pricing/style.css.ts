@@ -6,7 +6,7 @@ export default css`@layer view {
 
 	h2 {
 		text-align: center;
-		font-size: var(--font-size-grand);
+		font-size: 3em;
 		margin-bottom: var(--padding-smallish);
 	}
 

@@ -2,7 +2,7 @@
 import {ssg, html} from "@e280/scute"
 import {stuffUrl} from "./tools/stuff-url.js"
 
-const title = "Shrimple auth"
+const title = "shrimple.io"
 const domain = "shrimple.io"
 const favicon = stuffUrl("shrimp.png")
 const description = "shrimplest cheapest auth on the web "

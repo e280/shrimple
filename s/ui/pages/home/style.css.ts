@@ -14,6 +14,22 @@ export default css`@layer view {
 	}
 }
 
+h2 {
+	font-size: 2em;
+}
+
+.chill {
+	opacity: 0.5;
+	font-size: 1.5em;
+	font-family: serif;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.emoji {
+	font-size: 3em;
+}
+
 section.title {
 	display: flex;
 	flex-direction: column;
@@ -37,34 +53,25 @@ section.title {
 
 	img {
 		width: 100%;
-		max-width: 10em;
+		max-width: 8em;
 	}
 
 	h1 {
-		font-size: 5em;
+		font-size: 4em;
 		span:nth-child(2) {
 			color: var(--prime);
 		}
 	}
 
 	h2 {
-		font-size: 2.2em;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 0.8em;
 	}
 
-	h3 {
-		opacity: 0.5;
-		font-size: 1.5em;
-		font-family: serif;
-		font-weight: normal;
-		font-style: italic;
-	}
-
 	.actions {
-		font-size: 1.3em;
+		font-size: 1.1em;
 		a, button {
 			padding: 0.5em 2em;
 		}
@@ -74,21 +81,17 @@ section.title {
 section.philosophy {
 	display: flex;
 	flex-direction: column;
-	gap: 3em;
-
-	font-size: 1.2em;
 
 	width: 100%;
 	text-align: center;
 
-	h2 {
-		font-size: 2em;
-	}
-
 	.box {
+		font-size: 1em;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 2em;
+
+		margin-top: 3em;
 
 		> section {
 			flex: 1 0 10em;
@@ -169,14 +172,10 @@ section.providers {
 
 	h2 {
 		text-align: center;
-		font-size: var(--font-size-grand);
-		margin-bottom: var(--padding-smallish);
 	}
 
-	.subtitle {
-		text-align: center;
-		margin: 0 auto var(--padding-huge);
-		max-width: 32rem;
+	h3 {
+		margin-bottom: 2em;
 	}
 
 	.provider-box {
@@ -199,7 +198,7 @@ section.providers {
 	}
 
 	.provider-emoji {
-		font-size: 2rem;
+		font-size: 2em;
 	}
 
 	.provider-info {

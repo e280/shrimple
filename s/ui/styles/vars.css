@@ -1,13 +1,13 @@
 
 @layer vars {
 	:root {
-		--root-font-size: 16px;
 		--page-width: 80em;
 
 		--bg: hsl(220 25% 8%);
 		--text: hsl(195 50% 95%);
 		--text-shadow: 0.1em 0.3em 0.4em #0008;
 
+		--header-size: 4em;
 		--bg-card: hsl(220 25% 12%);
 		--bg-popover: var(--bg-card);
 
@@ -61,16 +61,6 @@
 		--rounded-big: 1em;
 		--rounded-bigger: 1.5em;
 
-		--font-size-smaller: 0.75em;
-		--font-size-small: 0.875em;
-		--font-size: 1em;
-		--font-size-big: 1.125em;
-		--font-size-bigger: 1.25em;
-		--font-size-huge: 1.5em;
-		--font-size-grand: 1.875em;
-		--font-size-hero: 2.25em;
-		--font-size-display: 3em;
-
 		--padding-smaller: 0.25em;
 		--padding-small: 0.5em;
 		--padding-smallish: 0.75em;
@@ -95,20 +85,6 @@
 
 		--font-primary: "Alan Sans", "Inter", "Segoe UI", sans-serif;
 		--font-tech: "SFMono-Regular", "JetBrains Mono", "Consolas", monospace;
-
-		--header-size: 4em;
-
-		--bg-gradient:
-			radial-gradient(
-				800px 500px at 15% -10%,
-				color-mix(in oklab, var(--bg-secondary), transparent 55%),
-				transparent 65%
-			),
-			radial-gradient(
-				900px 600px at 90% -20%,
-				color-mix(in oklab, var(--bg-accent), transparent 65%),
-				transparent 70%
-			);
 	}
 }
 
