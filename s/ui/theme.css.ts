@@ -1,24 +1,24 @@
-import {cssReset} from "@e280/sly"
-import {css} from "lit"
 
+import {css} from "lit"
+import {cssReset} from "@e280/sly"
 export default css`
-@layer reset, underlay, view, overlay;
+@layer reset, core, underlay, view, overlay;
 
 ${cssReset}
 
-@layer underlay {
-	:host {
-		color: var(--text);
-		font-family: var(--font-primary);
-	}
-
+@layer core {
 	*:focus-visible {
-		outline: 0.2em solid var(--focus-ring);
+		outline: 0.2em solid var(--focus);
 		outline-offset: 0.2em;
 	}
 
 	* {
 		box-sizing: border-box;
+	}
+
+	::selection, ::-moz-selection, ::-webkit-selection {
+		color: white;
+		background: var(--selection);
 	}
 
 	button,
@@ -46,6 +46,13 @@ ${cssReset}
 			color: color-mix(in oklab, transparent, var(--prime) 60%);
 		}
 	}
+}
+
+@layer underlay {
+	:host {
+		color: var(--text);
+		font-family: var(--font-primary);
+	}
 
 	[x-content] {
 		margin: 0 auto;
@@ -65,6 +72,48 @@ ${cssReset}
 		overflow: hidden;
 		clip: rect(0, 0, 0, 0);
 		border: 0;
+	}
+
+	[x-btn] {
+		font-size: 1em;
+		cursor: pointer;
+		font-weight: bold;
+		text-shadow: 0.04em 0.08em 0.10em #0008;
+
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		gap: 0.2em;
+		padding: 0.5em;
+
+		background: var(--prime);
+		color: var(--prime-text);
+		border-radius: var(--rounded);
+		box-shadow: var(--shadow);
+		border: 0.15em solid #fff4;
+
+		&[x-btn="subtle"] {
+			color: var(--text);
+			background: #8882;
+			border: 0.15em solid color-mix(in oklch, transparent, currentColor 50%);
+		}
+
+		&:is(:hover, :focus-visible) {
+			filter: brightness(120%);
+			text-decoration: underline;
+		}
+
+		&:active {
+			filter: brightness(80%);
+			text-decoration: underline;
+		}
+
+		&:disabled {
+			opacity: 0.6;
+			cursor: not-allowed;
+			box-shadow: none;
+		}
 	}
 
 	[x-button] {
@@ -100,7 +149,7 @@ ${cssReset}
 			box-shadow: none;
 		}
 
-		&[data-outline] {
+		&[x-button="subtle"], &[data-outline] {
 			background: transparent;
 			color: var(--text);
 			border-color: var(--border);
@@ -173,5 +222,6 @@ ${cssReset}
 		font-size: var(--font-size-smaller);
 		font-weight: 600;
 	}
-}
-`
+
+}`
+

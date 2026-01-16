@@ -1,9 +1,10 @@
 
 import {ssg, html} from "@e280/scute"
+import {stuffUrl} from "./tools/stuff-url.js"
 
-const title = "Shrimple auth"
+const title = "shrimple.io"
 const domain = "shrimple.io"
-const favicon = "/assets/shrimple.png"
+const favicon = stuffUrl("shrimp.png")
 const description = "shrimplest cheapest auth on the web "
 
 export default ssg.page(import.meta.url, async orb => ({
@@ -16,11 +17,11 @@ export default ssg.page(import.meta.url, async orb => ({
 		description,
 		themeColor: "#f06542",
 		siteName: domain,
-		image: `https://${domain}${favicon}`,
+		image: favicon,
 	},
 
 	head: html`
-		<link rel="icon" href="${favicon}">
+		<link rel="icon" href="${favicon}" crossorigin=anonymous>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap" rel="stylesheet">
@@ -35,3 +36,4 @@ export default ssg.page(import.meta.url, async orb => ({
 		<shrimple-shell></shrimple-shell>
 	`,
 }))
+

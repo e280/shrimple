@@ -12,7 +12,7 @@ export const PricingView = view(use => () => {
 		<div class="container">
 		<section class="pricing">
 			<div x-content>
-				<h2>Stupidly cheap pricing 🐡</h2>
+				<h2>🐡 stupidly cheap pricing</h2>
 				<p class="subtitle" x-muted>We totally didn't just make up these numbers just now.</p>
 				<p class="fine" x-muted>(okay maybe we did, but they're still pretty good)</p>
 
