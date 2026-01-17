@@ -1,0 +1,49 @@
+
+.feat-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2em;
+
+	font-size: min(1em, 3dvw);
+	height: calc(100dvh - var(--header-size));
+	padding-top: 4rem;
+	text-align: center;
+
+	&::before, &::after {
+		content: "";
+		display: block;
+		flex: 1 1 auto;
+	}
+
+	&::after {
+		flex: 2 1 auto;
+	}
+
+	img {
+		width: 100%;
+		max-width: 6em;
+	}
+
+	h1 {
+		font-size: 3em;
+		span:nth-child(2) {
+			color: var(--prime);
+		}
+	}
+
+	h2 {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.8em;
+	}
+
+	.actions {
+		font-size: 1em;
+		a, button {
+			padding: 0.5em 1em;
+		}
+	}
+}
+

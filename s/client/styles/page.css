@@ -1,0 +1,97 @@
+
+@layer page {
+	html {
+		font-size: clamp(12px, 2dvw, 21px);
+		font-family: var(--font-primary);
+
+		scrollbar-gutter: stable;
+
+		color: var(--text);
+		text-shadow: var(--text-shadow);
+		background:
+			radial-gradient(circle at center, #0a2c4033 10%, #09131fcc 80%) fixed,
+			url("https://stuff.sfo3.cdn.digitaloceanspaces.com/shrimple/bg.webp") center / cover fixed #000;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		min-height: 100dvh;
+
+		width: 100%;
+		max-width: var(--page-width);
+
+		margin: auto;
+
+		> shrimple-header {
+			z-index: 1;
+			position: sticky;
+			top: 0;
+		}
+
+		> main {
+			width: 100%;
+		}
+
+		> footer {
+			color: color-mix(in oklch, transparent, var(--text) 50%);
+			margin-top: auto;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			gap: 2em;
+
+			padding: 3em 1em;
+			background: #1114;
+			backdrop-filter: blur(0.5em);
+			border-top: 0.1em solid #fff2;
+			box-shadow: 0em -0.5em 1em #0004;
+		}
+	}
+
+	shrimple-shell {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: 100%;
+
+		> * {
+			width: 100%;
+		}
+	}
+
+	.featurettes {
+		container-type: inline-size;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 10em;
+		margin-bottom: 10em;
+
+		> section {
+			padding: 1em;
+		}
+	}
+
+	h2 {
+		font-size: 1.6em;
+	}
+
+	.chill {
+		opacity: 0.5;
+		font-size: 1.1em;
+		font-family: serif;
+		font-weight: normal;
+		font-style: italic;
+	}
+
+	.emoji {
+		font-size: 3em;
+	}
+}
+
