@@ -1,17 +1,16 @@
 import {ProviderKey} from "../../pages/apps/types.js"
 
 export const providers: Array<{key: ProviderKey; label: string; emoji: string}> = [
-	{key: "authlocal", label: "AuthLocal", emoji: "🔐"},
-	{key: "google", label: "Google", emoji: "🔵"},
-	{key: "apple", label: "Apple", emoji: "🍎"},
-	{key: "microsoft", label: "Microsoft", emoji: "🪟"},
+	{key: "authlocal", label: "authlocal", emoji: "🔐"},
+	{key: "google", label: "google", emoji: "🔵"},
+	{key: "microsoft", label: "microsoft", emoji: "🪟"},
 ]
 
 export const setupSteps = [
-	{num: 1, title: "Install", desc: "Add the package"},
-	{num: 2, title: "Initialize", desc: "Set up the client"},
-	{num: 3, title: "Login", desc: "Trigger auth flow"},
-	{num: 4, title: "Use Data", desc: "Access user info"},
+	{num: 1, title: "install", desc: "add the package"},
+	{num: 2, title: "initialize", desc: "set up the client"},
+	{num: 3, title: "login", desc: "trigger auth flow"},
+	{num: 4, title: "use data", desc: "access user info"},
 ]
 
 export const codeExamples = (appId: string) => ({

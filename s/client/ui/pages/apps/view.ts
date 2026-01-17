@@ -25,7 +25,7 @@ export const AppsView = view(use => () => {
 			name: "New App",
 			appId: hex.random(),
 			origins: "",
-			providers: {authlocal: true, google: false, apple: false, microsoft: false},
+			providers: {authlocal: true, google: false, microsoft: false},
 		}
 		$apps.value = [...$apps.value, newApp]
 		$selectedAppId.value = newApp.id

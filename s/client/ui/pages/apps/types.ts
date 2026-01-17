@@ -1,4 +1,4 @@
-export type ProviderKey = "authlocal" | "google" | "apple" | "microsoft"
+export type ProviderKey = "authlocal" | "google" | "microsoft"
 
 export type AppData = {
 	id: string

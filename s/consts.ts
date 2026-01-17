@@ -17,12 +17,6 @@ export const consts = {
 			free: false,
 		},
 		{
-			name: "apple",
-			emoji: "🍎",
-			description: "sign in with apple id",
-			free: false,
-		},
-		{
 			name: "microsoft",
 			emoji: "🪟",
 			description: "sign in with microsoft accounts",
