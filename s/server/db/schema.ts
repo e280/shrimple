@@ -1,5 +1,5 @@
 
-import {sql} from "../../tools/sql.js"
+import {sql} from "../utils/sql.js"
 
 export const schema = sql`
 

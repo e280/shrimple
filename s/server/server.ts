@@ -1,6 +1,6 @@
 
 import * as http from "http"
-import {env} from "../tools/env.js"
+import {env} from "./utils/env.js"
 import {makeApi} from "./parts/api.js"
 import {sqliteFileDb} from "./db/db.js"
 import {setupHttp} from "./parts/http.js"

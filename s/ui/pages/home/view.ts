@@ -8,6 +8,7 @@ import themeCss from "../../theme.css.js"
 import {providers} from "./parts/providers.js"
 import {stuffUrl} from "../../../tools/stuff-url.js"
 import {PricingView} from "../../views/pricing/view.js"
+import { consts } from "../../../consts.js"
 
 export const HomeView = view(use => () => {
 	use.css(themeCss, styleCss)
@@ -33,7 +34,7 @@ export const HomeView = view(use => () => {
 			</div>
 
 			<div class=actions>
-				<a x-btn=subtle href="https://github.com/e280/shrimple#readme">readme</a>
+				<a x-btn=subtle href="${consts.readme}">readme</a>
 				<a x-btn href="#/apps">start right now</a>
 			</div>
 		</section>

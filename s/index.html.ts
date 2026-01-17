@@ -1,5 +1,6 @@
 
 import {ssg, html} from "@e280/scute"
+import {consts} from "./consts.js"
 import {stuffUrl} from "./tools/stuff-url.js"
 
 const title = "shrimple.io"
@@ -21,19 +22,32 @@ export default ssg.page(import.meta.url, async orb => ({
 	},
 
 	head: html`
-		<link rel="icon" href="${favicon}" crossorigin=anonymous>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap" rel="stylesheet">
-		<style>${orb.inject("ui/styles/layer.css")}</style>
-		<style>${orb.inject("ui/styles/vars.css")}</style>
-		<style>${orb.inject("ui/styles/core.css")}</style>
-		<style>${orb.inject("ui/styles/page.css")}</style>
 		<meta content="app-version" value="${orb.packageVersion()}"/>
+
+		<link rel="icon" href="${favicon}" crossorigin="anonymous"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap"/>
+
+		<style>${orb.inject("styles/layer.css")}</style>
+		<style>${orb.inject("styles/vars.css")}</style>
+		<style>${orb.inject("styles/core.css")}</style>
+		<style>${orb.inject("styles/page.css")}</style>
 	`,
 
 	body: html`
-		<shrimple-shell></shrimple-shell>
+		<shrimple-header></shrimple-header>
+
+		<main>
+			<shrimple-shell></shrimple-shell>
+		</main>
+
+		<footer>
+			<nav>
+				<a href="https://e280.org/">e280.org</a>
+				<a href="${consts.readme}">readme</a>
+			</nav>
+		</footer>
 	`,
 }))
 
