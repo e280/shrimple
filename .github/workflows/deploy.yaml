@@ -23,7 +23,7 @@ jobs:
     - name: 🦐 move stuff around
       run: |
         rm x/client/s # delete symlink
-        mv s x/client/s # move files
+        cp -r s x/client/s
 
     - name: 🦐 setup ssh
       uses: webfactory/ssh-agent@v0.9.1
