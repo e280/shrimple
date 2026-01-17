@@ -16,6 +16,8 @@
 		--e280: #27ff23;
 		--link: #0cf;
 
+		--free: lime;
+
 		--selection: color-mix(in oklch, transparent, var(--prime) 80%);
 		--selection-text: white;
 		--focus: cyan;

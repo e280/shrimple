@@ -1,10 +1,23 @@
 
 import {css} from "lit"
-import {cssReset} from "@e280/sly"
 export default css`
-@layer reset, core, underlay, view, overlay;
+@layer reset, core, underlay, page, view, overlay;
 
-${cssReset}
+@layer reset {
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+
+		scrollbar-width: thin;
+		scrollbar-color: #888 transparent;
+	}
+
+	::-webkit-scrollbar { width: 8px; }
+	::-webkit-scrollbar-track { background: transparent; }
+	::-webkit-scrollbar-thumb { background: #333; border-radius: 1em; }
+	::-webkit-scrollbar-thumb:hover { background: #444; }
+}
 
 @layer core {
 	*:focus-visible {
@@ -222,6 +235,7 @@ ${cssReset}
 		font-size: var(--font-size-smaller);
 		font-weight: 600;
 	}
+}
 
-}`
+`
 

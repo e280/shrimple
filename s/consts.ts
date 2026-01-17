@@ -5,21 +5,27 @@ export const consts = {
 
 	providers: [
 		{
-			name: "authlocal",
+			name: "sign in via authlocal",
 			emoji: "🔐",
-			description: "free logins on authlocal.org",
+			description: "cryptographic logins",
 			free: true,
 		},
 		{
-			name: "google",
+			name: "sign in via google",
 			emoji: "🔵",
-			description: "sign in with google accounts",
+			// description: "regular people prefer this one",
 			free: false,
 		},
 		{
-			name: "microsoft",
-			emoji: "🪟",
-			description: "sign in with microsoft accounts",
+			name: "sign in via github",
+			emoji: "😾",
+			// description: "devs and nerds trust it",
+			free: false,
+		},
+		{
+			name: "sign in via discord",
+			emoji: "🎮",
+			// description: "gamers use this one",
 			free: false,
 		},
 	],

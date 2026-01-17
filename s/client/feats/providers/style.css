@@ -13,6 +13,20 @@
 		margin-bottom: 2em;
 	}
 
+	small {
+		opacity: 0.5;
+	}
+
+	[x-pill] {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--padding-smaller);
+		padding: 0.2rem 0.6rem;
+		border-radius: 999px;
+		font-size: var(--font-size-smaller);
+		font-weight: 600;
+	}
+
 	.provider-box {
 		display: flex;
 		flex-direction: column;
@@ -52,8 +66,8 @@
 	}
 
 	.free {
-		background: color-mix(in oklab, transparent, var(--tier-shrimp) 15%);
-		color: var(--tier-shrimp);
+		color: color-mix(in oklch, var(--free), white 50%);
+		background: color-mix(in oklch, transparent, var(--free) 15%);
 	}
 
 	.toggle {
