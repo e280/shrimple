@@ -14,6 +14,11 @@ export const featMindset = ssg.template(import.meta.url, async orb => html`
 
 		<div class=box>
 			<section>
+				<h3><span>✓ </span> only works one way</h3>
+				<p>the good way</p>
+			</section>
+
+			<section>
 				<h3><span>✓ </span> keep it shrimple, stupid</h3>
 				<p>authentication, nothing else</p>
 			</section>
@@ -21,11 +26,6 @@ export const featMindset = ssg.template(import.meta.url, async orb => html`
 			<section>
 				<h3><span>✓ </span> open source</h3>
 				<p>mit licensed</p>
-			</section>
-
-			<section>
-				<h3><span>✓ </span> only works one way</h3>
-				<p>the good way</p>
 			</section>
 		</div>
 	</section>

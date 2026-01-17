@@ -47,10 +47,9 @@
 		}
 
 		figcaption {
+			opacity: 0.5;
 			padding-left: 1em;
 			font-style: italic;
-			color: color-mix(in oklch, var(--calm), white 50%);
-			font-size: 0.8em;
 		}
 	}
 
