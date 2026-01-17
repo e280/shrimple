@@ -9,7 +9,7 @@ export const featPricing = ssg.template(import.meta.url, async orb => html`
 		<div x-emoji>🐡</div>
 
 		<h2 x-heading>
-			<strong>insanely cheap</strong>
+			<strong>insanely <em>cheap</em></strong>
 			<small>we totally didn't just make up these numbers just now</small>
 		</h2>
 

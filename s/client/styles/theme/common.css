@@ -12,6 +12,11 @@
 		font-size: 1.6em;
 		display: flex;
 		flex-direction: column;
+
+		em {
+			color: var(--prime);
+			font-style: normal;
+		}
 	}
 
 	[x-emoji] {

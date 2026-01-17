@@ -41,10 +41,16 @@
 		gap: 1em;
 		text-align: center;
 
+		em {
+			font-weight: bold;
+			font-style: normal;
+		}
+
 		figcaption {
 			padding-left: 1em;
 			font-style: italic;
-			font-size: 0.6em;
+			color: color-mix(in oklch, var(--calm), white 50%);
+			font-size: 0.8em;
 		}
 	}
 

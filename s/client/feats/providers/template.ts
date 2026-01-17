@@ -9,7 +9,7 @@ export const featProviders = ssg.template(import.meta.url, async orb => html`
 		<div x-emoji>🐠</div>
 
 		<h2 x-heading>
-			<strong>shrimple providers</strong>
+			<strong>shrimple <em>providers</em></strong>
 			<small>you'll just flick them on/off</small>
 		</h2>
 
