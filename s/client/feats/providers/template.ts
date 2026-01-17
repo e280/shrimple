@@ -24,9 +24,12 @@ export const featProviders = ssg.template(import.meta.url, async orb => html`
 							: null}
 						${provider.description && html`<small>${provider.description}</small>`}
 					</div>
-					<div class="toggle">
-						<span class="toggle-dot"></span>
-					</div>
+					<label class="toggle">
+						<input type="checkbox" class="toggle-input">
+						<span class="toggle-track">
+							<span class="toggle-dot"></span>
+						</span>
+					</label>
 				</div>
 			`)}
 		</div>

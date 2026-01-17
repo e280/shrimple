@@ -39,11 +39,14 @@
 		align-items: center;
 		gap: var(--padding);
 		padding: var(--padding);
+		position: relative;
 
 		border-radius: var(--rounded-big);
 		border-top: 0.15em solid #fff4;
 		background: #3b649945;
 		box-shadow: var(--shadow);
+
+		transition: background 150ms var(--anim), box-shadow 150ms var(--anim);
 	}
 
 	.provider-emoji {
@@ -71,22 +74,69 @@
 	}
 
 	.toggle {
-		width: 2.8rem;
-		height: 1.5rem;
-		border-radius: 999px;
-		background: var(--prime);
-		padding: 0.2rem;
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
+		position: relative;
+		cursor: pointer;
+	}
 
-		.toggle-dot {
-			width: 1.1rem;
-			height: 1.1rem;
-			border-radius: 999px;
-			background: white;
-			box-shadow: var(--shadow-small);
-		}
+	.toggle-input {
+		position: absolute;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.toggle-track {
+		width: 2.8em;
+		height: 1.5em;
+		border-radius: 999px;
+		background: color-mix(in oklch, var(--bg-card, #000), white 35%);
+		padding: 0.2em;
+
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+
+		transition: background 150ms ease;
+	}
+
+	.toggle-dot {
+		width: 1.1em;
+		height: 1.1em;
+		border-radius: 999px;
+		background: white;
+		box-shadow: var(--shadow-small);
+
+		transform: translateX(0);
+		transition: transform 150ms ease;
+	}
+
+	.toggle-input:checked + .toggle-track {
+		background: var(--prime);
+	}
+
+	.toggle-input:checked + .toggle-track .toggle-dot {
+		transform: translateX(1.3em);
+	}
+
+	.toggle-input:focus-visible + .toggle-track {
+		outline: 2px solid color-mix(in oklch, var(--prime), white 30%);
+		outline-offset: 3px;
+	}
+
+	.provider-card::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+
+		background: color-mix(in oklch, var(--prime), transparent 85%);
+		opacity: 0;
+
+		transition: opacity 200ms ease;
+		pointer-events: none;
+	}
+
+	.provider-card:has(.toggle-input:checked)::before {
+		opacity: 1;
 	}
 }
 
