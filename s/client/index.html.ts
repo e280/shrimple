@@ -1,7 +1,7 @@
 
 import {ssg, html} from "@e280/scute"
-import {consts} from "./consts.js"
-import {stuff} from "./tools/stuff.js"
+import {consts} from "../consts.js"
+import {stuff} from "../tools/stuff.js"
 
 const title = "shrimple.io"
 const domain = "shrimple.io"
@@ -11,7 +11,7 @@ const description = "shrimplest cheapest auth on the web "
 export default ssg.page(import.meta.url, async orb => ({
 	title,
 	dark: true,
-	js: "client/main.bundle.min.js",
+	js: "main.bundle.min.js",
 
 	socialCard: {
 		title,
@@ -29,10 +29,10 @@ export default ssg.page(import.meta.url, async orb => ({
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap"/>
 
-		<style>${orb.inject("client/styles/layer.css")}</style>
-		<style>${orb.inject("client/styles/vars.css")}</style>
-		<style>${orb.inject("client/styles/core.css")}</style>
-		<style>${orb.inject("client/styles/page.css")}</style>
+		<style>${orb.inject("styles/layer.css")}</style>
+		<style>${orb.inject("styles/vars.css")}</style>
+		<style>${orb.inject("styles/core.css")}</style>
+		<style>${orb.inject("styles/page.css")}</style>
 	`,
 
 	body: html`
