@@ -1,15 +1,15 @@
 
 .feat-pricing {
 	text-align: center;
+	width: 100%;
 
 	h2 {
 		font-size: 3em;
-		margin-bottom: var(--padding-smallish);
 	}
 
 	.subtitle {
 		text-align: center;
-		margin: 0 auto var(--padding-small);
+		margin: 0 auto var(--padding-hero);
 		max-width: 32rem;
 	}
 
@@ -32,7 +32,7 @@
 		flex-direction: column;
 		padding: var(--padding-big);
 		border-radius: var(--rounded-bigger);
-		border: 1px solid var(--border);
+    border: 1px solid	color-mix(in oklab, transparent, white 10%);
 		background: var(--bg-card);
 		box-shadow: var(--shadow-small);
 		transition: transform var(--anim) ease, box-shadow var(--anim) ease;
@@ -53,7 +53,7 @@
 			transform: translateX(-50%);
 			padding: 0.2rem 0.75rem;
 			border-radius: 999px;
-			font-size: var(--font-size-smaller);
+			font-size: 0.8em;
 			font-weight: 600;
 			color: white;
 
@@ -80,7 +80,7 @@
 			margin-bottom: var(--padding-smallish);
 
 			.price {
-				font-size: var(--font-size-grand);
+				font-size: 2.5em;
 				font-weight: 700;
 			}
 
@@ -108,7 +108,7 @@
 			display: flex;
 			align-items: center;
 			gap: var(--padding-small);
-			font-size: var(--font-size-small);
+			font-size: 0.8em;
 
 			.check {
 				color: var(--prime);

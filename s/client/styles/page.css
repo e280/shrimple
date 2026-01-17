@@ -8,9 +8,9 @@
 
 		color: var(--text);
 		text-shadow: var(--text-shadow);
-		background:
-			radial-gradient(circle at center, #0a2c4033 10%, #09131fcc 80%) fixed,
-			url("https://stuff.sfo3.cdn.digitaloceanspaces.com/shrimple/bg.webp") center / cover fixed #000;
+		background: radial-gradient(circle at 20% 20%,
+ 			color-mix(in oklab, transparent, var(--prime) 18%) 0%, transparent 55%), radial-gradient(circle at 80% 80%,
+ 			color-mix(in oklab, transparent, var(--tier-whale) 15%) 0%, transparent 60%), var(--gradient-ocean) fixed;
 	}
 
 	body {

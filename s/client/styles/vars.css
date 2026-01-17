@@ -87,6 +87,8 @@
 
 		--font-primary: "Alan Sans", "Inter", "Segoe UI", sans-serif;
 		--font-tech: "SFMono-Regular", "JetBrains Mono", "Consolas", monospace;
+
+		--gradient-ocean: linear-gradient(180deg, hsl(220 50% 4%) 0%, hsl(200 40% 8%) 50%, hsl(220 30% 6%) 100%);
 	}
 }
 

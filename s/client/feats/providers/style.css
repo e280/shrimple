@@ -29,8 +29,8 @@
 
 	.provider-box {
 		display: flex;
-		flex-direction: column;
 		flex-wrap: wrap;
+		justify-content: center;
 		gap: 0.8em;
 	}
 

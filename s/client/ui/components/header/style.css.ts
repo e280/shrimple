@@ -12,8 +12,9 @@ header {
 	justify-content: space-between;
 	align-items: center;
 
+  outline: 1px solid #ffffff29;
 	padding: 0.5em 1em;
-	background: var(--plate);
+	background: #0023391f;
 	backdrop-filter: blur(0.5em);
 	border-radius: 0em 0em 1em 1em;
 	border-bottom: 0.1em solid #fff2;
