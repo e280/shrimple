@@ -44,5 +44,5 @@ jobs:
         ssh \
           -o StrictHostKeyChecking=no \
           deployer@shrimple.io \
-          "/home/deployer/app/x/s/server/deploy.bash"
+          "/home/deployer/app/x/server/deploy.bash"
 
