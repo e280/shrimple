@@ -1,0 +1,10 @@
+
+@layer underlay {
+	[x-card] {
+		border-radius: var(--rounded-big);
+		border: 1px solid var(--border);
+		background: var(--bg-card);
+		box-shadow: var(--shadow-small);
+	}
+}
+

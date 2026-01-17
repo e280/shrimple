@@ -35,7 +35,14 @@ export default ssg.page(import.meta.url, async orb => ({
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap"/>
 
 		<style>${orb.inject("styles/vars.css")}</style>
-		<style data-theme>${orb.inject("styles/theme.css")}</style>
+		<style data-theme>${orb.inject("styles/theme/layers.css")}</style>
+		<style data-theme>${orb.inject("styles/theme/reset.css")}</style>
+		<style data-theme>${orb.inject("styles/theme/core.css")}</style>
+		<style data-theme>${orb.inject("styles/theme/common.css")}</style>
+		<style data-theme>${orb.inject("styles/theme/x-btn.css")}</style>
+		<style data-theme>${orb.inject("styles/theme/x-card.css")}</style>
+		<style data-theme>${orb.inject("styles/theme/x-input.css")}</style>
+		<style data-theme>${orb.inject("styles/theme/x-pill.css")}</style>
 		<style>${orb.inject("styles/page.css")}</style>
 	`,
 

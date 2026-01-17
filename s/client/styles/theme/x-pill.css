@@ -1,0 +1,13 @@
+
+@layer underlay {
+	[x-pill] {
+		display: inline-flex;
+		align-items: center;
+		gap: var(--padding-smaller);
+		padding: 0.2rem 0.6rem;
+		border-radius: 999px;
+		font-size: var(--font-size-smaller);
+		font-weight: 600;
+	}
+}
+
