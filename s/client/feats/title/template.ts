@@ -6,7 +6,7 @@ import {stuff} from "../../../tools/stuff.js"
 export const featTitle = ssg.template(import.meta.url, async orb => html`
 	<style>${orb.inject("style.css")}</style>
 
-	<section class=title>
+	<section class=feat-title>
 		<div>
 			<img src="${stuff("shrimp.png")}" alt="" crossorigin="anonymous"/>
 			<h1>

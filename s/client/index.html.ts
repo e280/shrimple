@@ -48,8 +48,8 @@ export default ssg.page(import.meta.url, async orb => ({
 				${orb.place(featTitle)}
 
 				<div class=featurettes>
-					${orb.place(featMindset)}
 					${orb.place(featQuote)}
+					${orb.place(featMindset)}
 					${orb.place(featProviders)}
 					${orb.place(featPricing)}
 				</div>
@@ -57,8 +57,8 @@ export default ssg.page(import.meta.url, async orb => ({
 		</main>
 
 		<footer>
-			<a href="https://e280.org/">e280.org</a>
 			<a href="${consts.readme}">readme</a>
+			<a href="https://e280.org/">e280.org</a>
 		</footer>
 	`,
 }))

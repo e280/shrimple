@@ -5,7 +5,7 @@ import {stuff} from "../../../tools/stuff.js"
 export const featQuote = ssg.template(import.meta.url, async orb => html`
 	<style>${orb.inject("style.css")}</style>
 
-	<section class=quote>
+	<section class=feat-quote>
 		<video src="${stuff("ocean.mp4")}" crossorigin="anonymous" muted autoplay loop></video>
 		<figure class=text>
 			<blockquote>

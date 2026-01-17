@@ -14,8 +14,10 @@
 		--prime: #fe6907;
 		--prime-text: hsl(0 0% 100%);
 		--e280: #27ff23;
+		--link: #0cf;
 
 		--selection: color-mix(in oklch, transparent, var(--prime) 80%);
+		--selection-text: white;
 		--focus: cyan;
 
 		--danger: hsl(0 62% 30%);
@@ -79,9 +81,7 @@
 		--shadow-big: 0 12px 30px color-mix(in oklab, transparent, black 35%);
 		--shadow-bigger: 0 20px 60px color-mix(in oklab, transparent, black 45%);
 
-		--anim-fast: 120ms;
-		--anim: 240ms;
-		--anim-slow: 420ms;
+		--anim: 150ms;
 
 		--font-primary: "Alan Sans", "Inter", "Segoe UI", sans-serif;
 		--font-tech: "SFMono-Regular", "JetBrains Mono", "Consolas", monospace;

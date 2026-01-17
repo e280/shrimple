@@ -5,8 +5,9 @@ import {consts} from "../../../consts.js"
 export const featProviders = ssg.template(import.meta.url, async orb => html`
 	<style>${orb.inject("style.css")}</style>
 
-	<section class="providers">
-		<span class=emoji>🐠</span>
+	<section class=feat-providers>
+		<div class=emoji>🐠</div>
+
 		<h2>shrimple providers</h2>
 		<h3 class=chill>flip 'em on, flip 'em off</h3>
 

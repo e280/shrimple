@@ -31,7 +31,7 @@ ${cssReset}
 	a {
 		color: var(--prime);
 		text-decoration: none;
-		transition: color var(--anim-fast) ease;
+		transition: color var(--anim) ease;
 
 		&:visited {
 			color: color-mix(in srgb, var(--prime), purple 30%);
@@ -131,10 +131,10 @@ ${cssReset}
 		font-weight: 600;
 		cursor: pointer;
 		transition:
-			transform var(--anim-fast) ease,
-			box-shadow var(--anim-fast) ease,
-			background var(--anim-fast) ease,
-			border-color var(--anim-fast) ease;
+			transform var(--anim) ease,
+			box-shadow var(--anim) ease,
+			background var(--anim) ease,
+			border-color var(--anim) ease;
 		box-shadow: var(--shadow);
 
 		&:hover {
@@ -196,8 +196,8 @@ ${cssReset}
 		color: var(--text);
 		font-size: var(--font-size-small);
 		transition:
-			border-color var(--anim-fast) ease,
-			box-shadow var(--anim-fast) ease;
+			border-color var(--anim) ease,
+			box-shadow var(--anim) ease;
 
 		&:focus {
 			outline: none;

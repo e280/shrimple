@@ -12,19 +12,23 @@
 	}
 
 	::selection, ::-moz-selection, ::-webkit-selection {
-		color: white;
+		color: var(--selection-text);
 		background: var(--selection);
 	}
 
 	a {
-		color: var(--prime);
+		color: var(--link);
 		text-decoration: none;
-		transition: color var(--anim-fast) ease;
-	}
 
-	a:is(:hover, :focus-visible) {
-		color: color-mix(in oklab, var(--prime), black 15%);
-		text-decoration: underline;
+		&:is(:hover, :focus-visible) {
+			color: color-mix(in oklch, var(--link), white 30%);
+			text-decoration: underline;
+		}
+
+		&:active {
+			color: color-mix(in oklch, var(--link), black 30%);
+			text-decoration: underline;
+		}
 	}
 }
 

@@ -86,7 +86,7 @@ export default css`@layer view {
 		background: var(--input);
 		padding: 0.15rem;
 		cursor: pointer;
-		transition: background var(--anim-fast) ease;
+		transition: background var(--anim) ease;
 		display: flex;
 		align-items: center;
 
@@ -96,7 +96,7 @@ export default css`@layer view {
 			border-radius: 999px;
 			background: white;
 			transform: translateX(0);
-			transition: transform var(--anim-fast) ease;
+			transition: transform var(--anim) ease;
 		}
 
 		&[data-on] {
@@ -130,7 +130,7 @@ export default css`@layer view {
 		gap: var(--padding-smaller);
 		text-align: center;
 		cursor: pointer;
-		transition: border-color var(--anim-fast) ease, box-shadow var(--anim-fast) ease;
+		transition: border-color var(--anim) ease, box-shadow var(--anim-fast) ease;
 
 		&[data-active] {
 			border-color: var(--prime);

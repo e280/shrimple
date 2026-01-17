@@ -39,9 +39,10 @@
 			margin-top: auto;
 
 			display: flex;
-			justify-content: space-around;
+			justify-content: center;
 			align-items: center;
 			width: 100%;
+			gap: 2em;
 
 			padding: 3em 1em;
 			background: var(--plate);

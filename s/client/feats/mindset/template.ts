@@ -4,9 +4,10 @@ import {html, ssg} from "@e280/scute"
 export const featMindset = ssg.template(import.meta.url, async orb => html`
 	<style>${orb.inject("style.css")}</style>
 
-	<section class=mindset>
-		<span class=emoji>🐚</span>
-		<h2>shrimple is so simple!</h2>
+	<section class=feat-mindset>
+		<div class=emoji>🐚</div>
+
+		<h2>shrimple is simple</h2>
 		<h3 class=chill>we're obsessed with shrimplicity</h3>
 
 		<div class=box>

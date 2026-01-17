@@ -5,8 +5,10 @@ import {consts} from "../../../consts.js"
 export const featPricing = ssg.template(import.meta.url, async orb => html`
 	<style>${orb.inject("style.css")}</style>
 
-	<section class="pricing">
-		<h2>🐡 stupidly cheap pricing</h2>
+	<section class=feat-pricing>
+		<div class=emoji>🐡</div>
+
+		<h2>stupidly cheap pricing</h2>
 		<p class="subtitle" x-muted>We totally didn't just make up these numbers just now.</p>
 
 		<div class="tier-grid">

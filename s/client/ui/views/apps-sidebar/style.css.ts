@@ -34,7 +34,7 @@ export default css`@layer view {
 		background: transparent;
 		font-size: var(--font-size-small);
 		cursor: pointer;
-		transition: background var(--anim-fast) ease, color var(--anim-fast) ease;
+		transition: background var(--anim) ease, color var(--anim-fast) ease;
 		color: var(--text);
 
 		&:hover {
