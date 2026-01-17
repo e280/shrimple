@@ -7,14 +7,17 @@ export const featQuote = ssg.template(import.meta.url, async orb => html`
 
 	<section class=feat-quote>
 		<video src="${stuff("ocean.mp4")}" crossorigin="anonymous" muted autoplay loop></video>
+
 		<figure class=text>
 			<blockquote>
 				“everything should be made as shrimple as possible,
 				<br/>
 				but not shrimpler.”
 			</blockquote>
+
 			<figcaption>— albert einstein</figcaption>
 		</figure>
+
 		<figure class=portrait>
 			<img src="${stuff("einstein.webp")}" alt="" crossorigin="anonymous"/>
 		</figure>

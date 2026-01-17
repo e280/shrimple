@@ -11,7 +11,7 @@ import {featProviders} from "./feats/providers/template.js"
 const title = "shrimple.io"
 const domain = "shrimple.io"
 const favicon = stuff("shrimp.png")
-const description = "shrimplest cheapest auth on the web "
+const description = "shrimplest cheapest auth on the web"
 
 export default ssg.page(import.meta.url, async orb => ({
 	title,
