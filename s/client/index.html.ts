@@ -63,8 +63,8 @@ export default ssg.page(import.meta.url, async orb => ({
 		</main>
 
 		<footer>
-			<p>learn more at the <a href="${consts.readme}">readme</a>.</p>
-			<p>shrimple is an <a href="https://e280.org/">e280.org</a> project.</p>
+			<p><a href="${consts.readme}">shrimple readme</a> to learn more.</p>
+			<p>shrimple is a project by <a href="https://e280.org/">e280.org</a>.</p>
 		</footer>
 	`,
 }))

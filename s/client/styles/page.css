@@ -40,10 +40,11 @@
 			margin-top: auto;
 
 			display: flex;
+			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			width: 100%;
-			gap: 2em;
+			gap: 0.3em;
 
 			padding: 3em 1em;
 			background: #1114;
