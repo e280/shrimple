@@ -4,7 +4,7 @@ import {view} from "@e280/sly"
 
 import styleCss from "./style.css.js"
 import themeCss from "../../theme.css.js"
-import {stuffUrl} from "../../../tools/stuff-url.js"
+import {stuff} from "../../../../tools/stuff.js"
 
 export const HeaderView = view(use => () => {
 	use.name("header")
@@ -14,7 +14,7 @@ export const HeaderView = view(use => () => {
 		<header>
 			<nav>
 				<a class="brand" href="#/">
-					<img src="${stuffUrl("shrimp.png")}" alt="" crossorigin="anonymous"/>
+					<img src="${stuff("shrimp.png")}" alt="" crossorigin="anonymous"/>
 				</a>
 				<a href="#/">home</a>
 				<a href="#/apps">apps</a>

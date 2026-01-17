@@ -6,9 +6,9 @@ import styleCss from "./style.css.js"
 import themeCss from "../../theme.css.js"
 
 import {providers} from "./parts/providers.js"
-import {stuffUrl} from "../../../tools/stuff-url.js"
+import {stuff} from "../../../../tools/stuff.js"
 import {PricingView} from "../../views/pricing/view.js"
-import { consts } from "../../../consts.js"
+import { consts } from "../../../../consts.js"
 
 export const HomeView = view(use => () => {
 	use.css(themeCss, styleCss)
@@ -16,7 +16,7 @@ export const HomeView = view(use => () => {
 	return html`
 		<section class=title>
 			<div>
-				<img src="${stuffUrl("shrimp.png")}" alt="" crossorigin="anonymous"/>
+				<img src="${stuff("shrimp.png")}" alt="" crossorigin="anonymous"/>
 				<h1>
 					<span>shrimple</span><span>.io</span>
 				</h1>
@@ -90,7 +90,7 @@ export const HomeView = view(use => () => {
 			</section>
 
 			<section class=quote>
-				<video src="${stuffUrl("ocean.mp4")}" crossorigin="anonymous" muted autoplay loop></video>
+				<video src="${stuff("ocean.mp4")}" crossorigin="anonymous" muted autoplay loop></video>
 				<figure class=text>
 					<blockquote>
 						“everything should be made as shrimple as possible,
@@ -100,7 +100,7 @@ export const HomeView = view(use => () => {
 					<figcaption>— albert einstein</figcaption>
 				</figure>
 				<figure class=portrait>
-					<img src="${stuffUrl("einstein.webp")}" alt="" crossorigin="anonymous"/>
+					<img src="${stuff("einstein.webp")}" alt="" crossorigin="anonymous"/>
 				</figure>
 			</section>
 

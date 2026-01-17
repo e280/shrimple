@@ -1,7 +1,8 @@
 
 import {consts} from "../consts.js"
 
-export function stuffUrl(path: string) {
+/** prefix path with cdn url */
+export function stuff(path: string) {
 	return `${consts.stuff}/${path}`
 }
 
