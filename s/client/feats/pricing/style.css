@@ -57,7 +57,7 @@
 			font-weight: 600;
 			color: white;
 
-			&.shrimp { background: var(--tier-shrimp); }
+			&.shrimp { background: color-mix(in oklch, #00000000, #1b761b 100%); }
 			&.crab { background: var(--tier-crab); }
 			&.lobster { background: var(--tier-lobster); }
 			&.whale { background: var(--tier-whale); }
