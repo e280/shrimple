@@ -3,11 +3,14 @@
 	[x-pill] {
 		display: inline-flex;
 		align-items: center;
+
 		gap: var(--padding-smaller);
 		padding: 0.2rem 0.6rem;
-		border-radius: 999px;
-		font-size: var(--font-size-smaller);
-		font-weight: 600;
+
+		color: color-mix(in oklch, currentColor, white 50%);
+		background: color-mix(in oklch, black, currentColor 50%);
+		border: 0.15em solid color-mix(in oklch, #444, currentColor 50%);
+		border-radius: 1em;
 	}
 }
 

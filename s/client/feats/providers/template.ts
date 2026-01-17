@@ -17,17 +17,28 @@ export const featProviders = ssg.template(import.meta.url, async orb => html`
 			${consts.providers.map(provider => html`
 				<div class="provider-card">
 					<span class="provider-emoji">${provider.emoji}</span>
+
 					<div class="provider-info">
 						<div class="provider-title">
 							<h3>${provider.name}</h3>
 						</div>
+
 						${provider.free
-							? html`<span x-pill class="free">FREE</span>`
+							? html`<span x-pill class=free>free</span>`
 							: null}
+
+						${provider.premium
+							? html`<span x-pill class=premium>premium</span>`
+							: null}
+
 						${provider.description && html`<small>${provider.description}</small>`}
 					</div>
+
 					<label class="toggle">
-						<input type="checkbox" class="toggle-input">
+						${provider.free
+							? html`<input type="checkbox" class="toggle-input" checked>`
+							: html`<input type="checkbox" class="toggle-input">`}
+
 						<span class="toggle-track">
 							<span class="toggle-dot"></span>
 						</span>

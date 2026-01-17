@@ -16,93 +16,79 @@
 
 	.tier-grid {
 		display: grid;
-		gap: var(--padding-big);
+		gap: 0.4em;
 		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 	}
 
 	.tier-card {
 		position: relative;
+
 		display: flex;
 		flex-direction: column;
-		padding: var(--padding-big);
+		gap: var(--padding);
+
+		padding: var(--padding);
 		border-radius: var(--rounded-bigger);
-    border: 1px solid	color-mix(in oklab, transparent, white 10%);
+		border: 1px solid	color-mix(in oklab, transparent, white 10%);
+
 		background: var(--bg-card);
 		box-shadow: var(--shadow-small);
 		transition: transform var(--anim) ease, box-shadow var(--anim) ease;
+
+		h3 {
+			font-size: 2em;
+		}
 
 		&:hover {
 			transform: translateY(-6px);
 			box-shadow: var(--shadow-big);
 		}
 
-		&[data-popular] {
-			box-shadow: 0 0 0 2px color-mix(in oklab, transparent, var(--tier-lobster) 70%), var(--shadow-big);
-		}
-
-		.tier-badge {
+		[x-pill] {
 			position: absolute;
-			top: -0.75rem;
+			top: -0.75em;
 			left: 50%;
 			transform: translateX(-50%);
-			padding: 0.2rem 0.75rem;
-			border-radius: 999px;
-			font-size: 0.8em;
-			font-weight: 600;
-			color: white;
 
-			&.shrimp { background: color-mix(in oklch, #00000000, #1b761b 100%); }
-			&.crab { background: var(--tier-crab); }
-			&.lobster { background: var(--tier-lobster); }
-			&.whale { background: var(--tier-whale); }
+			color: white;
+			&[data-highlight="free"] { color: var(--free); }
+			&[data-highlight="nice"] { color: var(--calm); }
 		}
 
 		.tier-emoji {
 			text-align: center;
-			font-size: 2.5rem;
-			margin-bottom: var(--padding);
-		}
-
-		h3 {
-			text-align: center;
-			margin: 0 0 var(--padding-small);
-			font-size: var(--font-size-bigger);
+			font-size: 4em;
 		}
 
 		.tier-price {
 			text-align: center;
-			margin-bottom: var(--padding-smallish);
+			color: color-mix(in oklch, var(--calm), white 50%);
 
 			.price {
-				font-size: 2.5em;
-				font-weight: 700;
-			}
-
-			.period {
-				margin-left: var(--padding-smaller);
+				font-size: 1.5em;
+				font-weight: bold;
 			}
 		}
 
 		.tier-desc {
 			text-align: center;
-			margin-bottom: var(--padding);
 		}
 
 		ul {
+			color: var(--text-weak);
 			list-style: none;
 			display: flex;
 			flex-direction: column;
 			gap: var(--padding-small);
-			margin: 0 0 var(--padding-big);
 			padding: 0;
 			flex: 1;
 		}
 
 		li {
 			display: flex;
-			align-items: center;
 			gap: var(--padding-small);
 			font-size: 0.8em;
+			text-align: left;
 
 			.check {
 				color: var(--prime);
@@ -112,6 +98,7 @@
 
 		button {
 			width: 100%;
+			margin-top: 2em;
 		}
 	}
 }

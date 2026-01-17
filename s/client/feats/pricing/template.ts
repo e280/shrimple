@@ -9,32 +9,36 @@ export const featPricing = ssg.template(import.meta.url, async orb => html`
 		<div x-emoji>🐡</div>
 
 		<h2 x-heading>
-			<strong>cheap pricing</strong>
+			<strong>insanely cheap</strong>
 			<small>we totally didn't just make up these numbers just now</small>
 		</h2>
 
 		<div class="tier-grid">
 			${consts.tiers.map(tier => html`
-				<div class="tier-card" ?data-popular=${tier.popular}>
+				<div class="tier-card">
 					${tier.highlight
-						? html`<div class="tier-badge ${tier.color}">${tier.highlight}</div>`
+						? html`<div x-pill class=tier-badge data-highlight="${tier.highlight}">${tier.highlight}</div>`
 						: null
 					}
+
 					<div class="tier-emoji">${tier.emoji}</div>
+
 					<h3>${tier.name}</h3>
+
 					<div class="tier-price">
 						<span class="price">${tier.price}</span>
 						<span class="period" x-muted>${tier.period}</span>
 					</div>
-					<p class="tier-desc" x-muted>${tier.description}</p>
+
 					<ul>
 						${tier.features.map(feature => html`
 							<li><span class="check">✓</span>${feature}</li>
 						`)}
 					</ul>
-				<button x-button ?data-outline=${!tier.popular}>
-					${tier.price === "$0" ? "Start Free" : "Get Started"}
-				</button>
+
+					<button x-button>
+						choose
+					</button>
 				</div>
 			`)}
 		</div>

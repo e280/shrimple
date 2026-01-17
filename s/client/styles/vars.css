@@ -5,6 +5,8 @@
 		--header-size: 4em;
 
 		--text: hsl(195 50% 95%);
+		--text-weak: color-mix(in oklch, transparent, var(--text) 50%);
+
 		--text-shadow: 0.1em 0.3em 0.4em #0008;
 
 		--plate: #00233985;
@@ -13,6 +15,8 @@
 
 		--prime: #fe6907;
 		--prime-text: hsl(0 0% 100%);
+		--calm: #0cf;
+
 		--e280: #27ff23;
 		--link: #0cf;
 
