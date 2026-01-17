@@ -38,7 +38,7 @@
 		display: flex;
 		align-items: center;
 		gap: var(--padding);
-		padding: var(--padding);
+		padding: var(--padding-big);
 		position: relative;
 
 		border-radius: var(--rounded-big);
@@ -69,6 +69,10 @@
 	}
 
 	.free {
+		position: absolute;
+		top: 0.4em;
+		left: 0.6em;
+		font-size: 0.6em;
 		color: color-mix(in oklch, var(--free), white 50%);
 		background: color-mix(in oklch, transparent, var(--free) 15%);
 	}
