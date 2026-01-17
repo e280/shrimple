@@ -7,6 +7,7 @@
 		--text: hsl(195 50% 95%);
 		--text-shadow: 0.1em 0.3em 0.4em #0008;
 
+		--plate: #00233985;
 		--bg-card: hsl(220 25% 12%);
 		--bg-popover: var(--bg-card);
 

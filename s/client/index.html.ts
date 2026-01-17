@@ -3,10 +3,10 @@ import {ssg, html} from "@e280/scute"
 import {consts} from "../consts.js"
 import {stuff} from "../tools/stuff.js"
 import {featTitle} from "./feats/title/template.js"
-import { featMindset } from "./feats/mindset/template.js"
-import { featQuote } from "./feats/quote/template.js"
-import { featPricing } from "./feats/pricing/template.js"
-import { featProviders } from "./feats/providers/template.js"
+import {featQuote} from "./feats/quote/template.js"
+import {featPricing} from "./feats/pricing/template.js"
+import {featMindset} from "./feats/mindset/template.js"
+import {featProviders} from "./feats/providers/template.js"
 
 const title = "shrimple.io"
 const domain = "shrimple.io"
@@ -57,10 +57,8 @@ export default ssg.page(import.meta.url, async orb => ({
 		</main>
 
 		<footer>
-			<nav>
-				<a href="https://e280.org/">e280.org</a>
-				<a href="${consts.readme}">readme</a>
-			</nav>
+			<a href="https://e280.org/">e280.org</a>
+			<a href="${consts.readme}">readme</a>
 		</footer>
 	`,
 }))

@@ -52,7 +52,7 @@ section.quote {
 	}
 
 	img {
-		opacity: 0.2;
+		opacity: 0.3;
 		width: 25cqw;
 		flex: 0 0 auto;
 		mask-image: linear-gradient(to right, transparent 5%, black 50%);

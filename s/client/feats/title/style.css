@@ -5,8 +5,8 @@ section.title {
 	justify-content: center;
 	gap: 4em;
 
-	font-size: min(1em, 3vw);
-	height: calc(100vh - var(--header-size));
+	font-size: min(1em, 3dvw);
+	height: calc(100dvh - var(--header-size));
 	padding-top: 4rem;
 	text-align: center;
 
