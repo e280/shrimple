@@ -9,8 +9,8 @@ export const featProviders = ssg.template(import.meta.url, async orb => html`
 		<div x-emoji>🐠</div>
 
 		<h2 x-heading>
-			<strong>shrimple <em>providers</em></strong>
-			<small>you'll just flick them on/off</small>
+			<strong>shrimple login <em>options</em></strong>
+			<small>it's that easy</small>
 		</h2>
 
 		<div class="provider-box">
@@ -30,8 +30,6 @@ export const featProviders = ssg.template(import.meta.url, async orb => html`
 						${provider.premium
 							? html`<span x-pill class=premium>premium</span>`
 							: null}
-
-						${provider.description && html`<small>${provider.description}</small>`}
 					</div>
 
 					<label class="toggle">

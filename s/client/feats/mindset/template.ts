@@ -8,8 +8,8 @@ export const featMindset = ssg.template(import.meta.url, async orb => html`
 		<div x-emoji>🐚</div>
 
 		<h2 x-heading>
-			<strong>obsessed with <em>shrimplicity</em></strong>
-			<small>minimalist setup and config</small>
+			<strong>minimalist <em>shrimplicity</em></strong>
+			<small>easiest setup in the world</small>
 		</h2>
 
 		<div class=box>

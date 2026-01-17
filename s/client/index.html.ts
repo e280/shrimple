@@ -54,9 +54,9 @@ export default ssg.page(import.meta.url, async orb => ({
 				${orb.place(featTitle)}
 
 				<div class=featurettes>
-					${orb.place(featQuote)}
-					${orb.place(featMindset)}
 					${orb.place(featProviders)}
+					${orb.place(featMindset)}
+					${orb.place(featQuote)}
 					${orb.place(featPricing)}
 				</div>
 			</shrimple-shell>
