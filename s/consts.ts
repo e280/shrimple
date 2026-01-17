@@ -57,7 +57,7 @@ export const consts = {
 			price: "$9",
 			period: "/month",
 			description: "100k logins via any provider",
-			highlight: "Popular",
+			highlight: null,
 			color: "lobster",
 			popular: true,
 			features: ["100,000 logins/mo", "All auth providers", "Priority support", "Analytics"],
