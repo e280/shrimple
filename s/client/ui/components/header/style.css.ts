@@ -39,5 +39,9 @@ nav {
 	}
 }
 
+.login {
+	padding: 0.2em 1.5em;
+}
+
 }`
 

@@ -1,7 +1,7 @@
 
 @layer vars {
 	:root {
-		--page-width: 80em;
+		--page-width: 60em;
 		--header-size: 4em;
 
 		--text: hsl(195 50% 95%);

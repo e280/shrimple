@@ -23,7 +23,7 @@ export class ShrimpleHeader extends view.component(use => {
 				<a href="${router.nav.apps.hash()}" ?data-active="${router.nav.apps.active}">apps</a>
 			</nav>
 
-			<button x-btn>login</button>
+			<button x-btn class=login>login</button>
 		</header>
 	`
 }) {}
