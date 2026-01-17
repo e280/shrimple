@@ -71,6 +71,7 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 10em;
+		margin-bottom: 10em;
 
 		> section {
 			padding: 1em;
