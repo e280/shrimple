@@ -5,10 +5,12 @@ export const featMindset = ssg.template(import.meta.url, async orb => html`
 	<style>${orb.inject("style.css")}</style>
 
 	<section class=feat-mindset>
-		<div class=emoji>🐚</div>
+		<div x-emoji>🐚</div>
 
-		<h2>shrimple is simple</h2>
-		<h3 class=chill>we're obsessed with shrimplicity</h3>
+		<h2 x-heading>
+			<strong>shrimple is simple</strong>
+			<small>we're obsessed with shrimplicity</small>
+		</h2>
 
 		<div class=box>
 			<section>

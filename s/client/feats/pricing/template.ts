@@ -6,10 +6,12 @@ export const featPricing = ssg.template(import.meta.url, async orb => html`
 	<style>${orb.inject("style.css")}</style>
 
 	<section class=feat-pricing>
-		<div class=emoji>🐡</div>
+		<div x-emoji>🐡</div>
 
-		<h2>stupidly cheap pricing</h2>
-		<p class="subtitle" x-muted>We totally didn't just make up these numbers just now.</p>
+		<h2 x-heading>
+			<strong>cheap pricing</strong>
+			<small>we totally didn't just make up these numbers just now</small>
+		</h2>
 
 		<div class="tier-grid">
 			${consts.tiers.map(tier => html`

@@ -77,21 +77,5 @@
 			padding: 1em;
 		}
 	}
-
-	h2 {
-		font-size: 1.6em;
-	}
-
-	.chill {
-		opacity: 0.5;
-		font-size: 1.1em;
-		font-family: serif;
-		font-weight: normal;
-		font-style: italic;
-	}
-
-	.emoji {
-		font-size: 3em;
-	}
 }
 

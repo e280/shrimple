@@ -62,9 +62,22 @@
 		font-family: var(--font-primary);
 	}
 
-	[x-content] {
-		margin: 0 auto;
-		padding: 0 var(--padding-big);
+	small {
+		opacity: 0.5;
+		font-size: 0.7em;
+		font-family: serif;
+		font-weight: normal;
+		font-style: italic;
+	}
+
+	[x-heading] {
+		font-size: 1.6em;
+		display: flex;
+		flex-direction: column;
+	}
+
+	[x-emoji] {
+		font-size: 3em;
 	}
 
 	[x-muted] {
@@ -124,6 +137,7 @@
 		}
 	}
 
+	/** @deprecated please use newer [x-btn] */
 	[x-button] {
 		display: inline-flex;
 		align-items: center;

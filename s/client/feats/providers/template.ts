@@ -6,10 +6,12 @@ export const featProviders = ssg.template(import.meta.url, async orb => html`
 	<style>${orb.inject("style.css")}</style>
 
 	<section class=feat-providers>
-		<div class=emoji>🐠</div>
+		<div x-emoji>🐠</div>
 
-		<h2>shrimple providers</h2>
-		<h3 class=chill>you'll just flick them on/off</h3>
+		<h2 x-heading>
+			<strong>shrimple providers</strong>
+			<small>you'll just flick them on/off</small>
+		</h2>
 
 		<div class="provider-box">
 			${consts.providers.map(provider => html`

@@ -15,14 +15,14 @@ export const featTitle = ssg.template(import.meta.url, async orb => html`
 		</div>
 
 		<div>
-			<h2>
-				<span>auth.</span>
-				<span>easy.</span>
-				<span>done.</span>
+			<h2 x-heading>
+				<strong>
+					<span>auth.</span>
+					<span>easy.</span>
+					<span>done.</span>
+				</strong>
+				<small>shrimplest login system for the web</small>
 			</h2>
-			<h3 class=chill>
-				shrimplest login system for the web
-			</h3>
 		</div>
 
 		<div class=actions>

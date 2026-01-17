@@ -3,14 +3,8 @@
 	text-align: center;
 	width: 100%;
 
-	h2 {
-		font-size: 3em;
-	}
-
-	.subtitle {
-		text-align: center;
-		margin: 0 auto var(--padding-hero);
-		max-width: 32rem;
+	> h2 {
+		margin-bottom: 2em;
 	}
 
 	.fine {
