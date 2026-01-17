@@ -6,20 +6,26 @@
 	width: 100%;
 	text-align: center;
 
+	> h2 {
+		margin-bottom: 2em;
+	}
+
+	h3 > span {
+		color: var(--prime);
+	}
+
+	p {
+		opacity: 0.5;
+	}
+
 	.box {
 		font-size: 1em;
 		display: flex;
 		flex-wrap: wrap;
 		gap: 2em;
 
-		margin-top: 3em;
-
 		> section {
 			flex: 1 0 10em;
-
-			h3 > span {
-				color: var(--prime);
-			}
 		}
 	}
 }

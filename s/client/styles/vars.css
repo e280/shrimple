@@ -5,6 +5,8 @@
 		--header-size: 4em;
 
 		--text: hsl(195 50% 95%);
+		--text-weak: color-mix(in oklch, transparent, var(--text) 50%);
+
 		--text-shadow: 0.1em 0.3em 0.4em #0008;
 
 		--plate: #00233985;
@@ -13,6 +15,8 @@
 
 		--prime: #fe6907;
 		--prime-text: hsl(0 0% 100%);
+		--calm: #0cf;
+
 		--e280: #27ff23;
 		--link: #0cf;
 
@@ -87,6 +91,8 @@
 
 		--font-primary: "Alan Sans", "Inter", "Segoe UI", sans-serif;
 		--font-tech: "SFMono-Regular", "JetBrains Mono", "Consolas", monospace;
+
+		--gradient-ocean: linear-gradient(180deg, hsl(220 50% 4%) 0%, hsl(200 40% 8%) 50%, hsl(220 30% 6%) 100%);
 	}
 }
 

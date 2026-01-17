@@ -8,9 +8,9 @@
 
 		color: var(--text);
 		text-shadow: var(--text-shadow);
-		background:
-			radial-gradient(circle at center, #0a2c4033 10%, #09131fcc 80%) fixed,
-			url("https://stuff.sfo3.cdn.digitaloceanspaces.com/shrimple/bg.webp") center / cover fixed #000;
+		background: radial-gradient(circle at 20% 20%,
+ 			color-mix(in oklab, transparent, var(--prime) 18%) 0%, transparent 55%), radial-gradient(circle at 80% 80%,
+ 			color-mix(in oklab, transparent, var(--tier-whale) 15%) 0%, transparent 60%), var(--gradient-ocean) fixed;
 	}
 
 	body {
@@ -40,16 +40,17 @@
 			margin-top: auto;
 
 			display: flex;
+			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			width: 100%;
-			gap: 2em;
+			gap: 0.3em;
 
 			padding: 3em 1em;
 			background: #1114;
-			backdrop-filter: blur(0.5em);
 			border-top: 0.1em solid #fff2;
-			box-shadow: 0em -0.5em 1em #0004;
+			border-top-right-radius: 20px;
+			border-top-left-radius: 20px;
 		}
 	}
 
@@ -76,22 +77,6 @@
 		> section {
 			padding: 1em;
 		}
-	}
-
-	h2 {
-		font-size: 1.6em;
-	}
-
-	.chill {
-		opacity: 0.5;
-		font-size: 1.1em;
-		font-family: serif;
-		font-weight: normal;
-		font-style: italic;
-	}
-
-	.emoji {
-		font-size: 3em;
 	}
 }
 

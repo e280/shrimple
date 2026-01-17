@@ -1,0 +1,41 @@
+
+@layer underlay {
+	small {
+		opacity: 0.5;
+		font-size: 0.7em;
+		font-family: serif;
+		font-weight: normal;
+		font-style: italic;
+	}
+
+	[x-heading] {
+		font-size: 1.6em;
+		display: flex;
+		flex-direction: column;
+
+		em {
+			color: var(--prime);
+			font-style: normal;
+		}
+	}
+
+	[x-emoji] {
+		font-size: 3em;
+	}
+
+	[x-muted] {
+		color: var(--text-muted);
+	}
+
+	[x-sr] {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		border: 0;
+	}
+}
+

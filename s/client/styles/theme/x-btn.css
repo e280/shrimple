@@ -1,87 +1,5 @@
 
-@layer
-	vars,
-	reset,
-	core,
-	underlay,
-	basics,
-	view,
-	page,
-	overlay;
-
-@layer reset {
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-
-		scrollbar-width: thin;
-		scrollbar-color: #888 transparent;
-	}
-
-	::-webkit-scrollbar { width: 8px; }
-	::-webkit-scrollbar-track { background: transparent; }
-	::-webkit-scrollbar-thumb { background: #333; border-radius: 1em; }
-	::-webkit-scrollbar-thumb:hover { background: #444; }
-}
-
-@layer core {
-	*:focus-visible {
-		outline: 0.2em solid var(--focus);
-		outline-offset: 0.2em;
-	}
-
-	::selection, ::-moz-selection, ::-webkit-selection {
-		color: var(--selection-text);
-		background: var(--selection);
-	}
-
-	a {
-		color: var(--link);
-		text-decoration: none;
-
-		&:is(:hover, :focus-visible) {
-			color: color-mix(in oklch, var(--link), white 30%);
-			text-decoration: underline;
-		}
-
-		&:active {
-			color: color-mix(in oklch, var(--link), black 30%);
-			text-decoration: underline;
-		}
-	}
-
-	button, input, select, textarea {
-		font: inherit;
-	}
-}
-
 @layer underlay {
-	:host {
-		color: var(--text);
-		font-family: var(--font-primary);
-	}
-
-	[x-content] {
-		margin: 0 auto;
-		padding: 0 var(--padding-big);
-	}
-
-	[x-muted] {
-		color: var(--text-muted);
-	}
-
-	[x-sr] {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		padding: 0;
-		margin: -1px;
-		overflow: hidden;
-		clip: rect(0, 0, 0, 0);
-		border: 0;
-	}
-
 	[x-btn] {
 		font-size: 1em;
 		cursor: pointer;
@@ -124,6 +42,7 @@
 		}
 	}
 
+	/** @deprecated please use newer [x-btn] */
 	[x-button] {
 		display: inline-flex;
 		align-items: center;
@@ -192,43 +111,6 @@
 			font-size: var(--font-size);
 			border-radius: var(--rounded-big);
 		}
-	}
-
-	[x-input] {
-		width: 100%;
-		min-height: 2.75rem;
-		padding: 0.6rem 0.85rem;
-		border-radius: var(--rounded-small);
-		border: 1px solid var(--input);
-		background: var(--bg-card);
-		color: var(--text);
-		font-size: var(--font-size-small);
-		transition:
-			border-color var(--anim) ease,
-			box-shadow var(--anim) ease;
-
-		&:focus {
-			outline: none;
-			border-color: var(--prime);
-			box-shadow: 0 0 0 3px color-mix(in oklab, transparent, var(--prime) 15%);
-		}
-	}
-
-	[x-card] {
-		border-radius: var(--rounded-big);
-		border: 1px solid var(--border);
-		background: var(--bg-card);
-		box-shadow: var(--shadow-small);
-	}
-
-	[x-pill] {
-		display: inline-flex;
-		align-items: center;
-		gap: var(--padding-smaller);
-		padding: 0.2rem 0.6rem;
-		border-radius: 999px;
-		font-size: var(--font-size-smaller);
-		font-weight: 600;
 	}
 }
 

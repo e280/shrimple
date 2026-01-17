@@ -6,27 +6,43 @@ export const featProviders = ssg.template(import.meta.url, async orb => html`
 	<style>${orb.inject("style.css")}</style>
 
 	<section class=feat-providers>
-		<div class=emoji>🐠</div>
+		<div x-emoji>🐠</div>
 
-		<h2>shrimple providers</h2>
-		<h3 class=chill>you'll just flick them on/off</h3>
+		<h2 x-heading>
+			<strong>shrimple <em>providers</em></strong>
+			<small>you'll just flick them on/off</small>
+		</h2>
 
 		<div class="provider-box">
 			${consts.providers.map(provider => html`
 				<div class="provider-card">
 					<span class="provider-emoji">${provider.emoji}</span>
+
 					<div class="provider-info">
 						<div class="provider-title">
 							<h3>${provider.name}</h3>
 						</div>
+
 						${provider.free
-							? html`<span x-pill class="free">FREE</span>`
+							? html`<span x-pill class=free>free</span>`
 							: null}
+
+						${provider.premium
+							? html`<span x-pill class=premium>premium</span>`
+							: null}
+
 						${provider.description && html`<small>${provider.description}</small>`}
 					</div>
-					<div class="toggle">
-						<span class="toggle-dot"></span>
-					</div>
+
+					<label class="toggle">
+						${provider.free
+							? html`<input type="checkbox" class="toggle-input" checked>`
+							: html`<input type="checkbox" class="toggle-input">`}
+
+						<span class="toggle-track">
+							<span class="toggle-dot"></span>
+						</span>
+					</label>
 				</div>
 			`)}
 		</div>

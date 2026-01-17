@@ -10,9 +10,9 @@ export const featQuote = ssg.template(import.meta.url, async orb => html`
 
 		<figure class=text>
 			<blockquote>
-				“everything should be made as shrimple as possible,
+				“everything should be made as <em>shrimple</em> as possible,
 				<br/>
-				but not shrimpler.”
+				but not <em>shrimpler.</em>”
 			</blockquote>
 
 			<figcaption>— albert einstein</figcaption>

@@ -1,0 +1,23 @@
+
+@layer underlay {
+	[x-input] {
+		width: 100%;
+		min-height: 2.75rem;
+		padding: 0.6rem 0.85rem;
+		border-radius: var(--rounded-small);
+		border: 1px solid var(--input);
+		background: var(--bg-card);
+		color: var(--text);
+		font-size: var(--font-size-small);
+		transition:
+			border-color var(--anim) ease,
+			box-shadow var(--anim) ease;
+
+		&:focus {
+			outline: none;
+			border-color: var(--prime);
+			box-shadow: 0 0 0 3px color-mix(in oklab, transparent, var(--prime) 15%);
+		}
+	}
+}
+

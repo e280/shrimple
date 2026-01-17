@@ -1,0 +1,32 @@
+
+@layer core {
+	*:focus-visible {
+		outline: 0.2em solid var(--focus);
+		outline-offset: 0.2em;
+	}
+
+	::selection, ::-moz-selection, ::-webkit-selection {
+		color: var(--selection-text);
+		background: var(--selection);
+	}
+
+	a {
+		color: var(--link);
+		text-decoration: none;
+
+		&:is(:hover, :focus-visible) {
+			color: color-mix(in oklch, var(--link), white 30%);
+			text-decoration: underline;
+		}
+
+		&:active {
+			color: color-mix(in oklch, var(--link), black 30%);
+			text-decoration: underline;
+		}
+	}
+
+	button, input, select, textarea {
+		font: inherit;
+	}
+}
+
