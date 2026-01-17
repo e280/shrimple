@@ -2,6 +2,11 @@
 import {ssg, html} from "@e280/scute"
 import {consts} from "../consts.js"
 import {stuff} from "../tools/stuff.js"
+import {featTitle} from "./feats/title/template.js"
+import { featMindset } from "./feats/mindset/template.js"
+import { featQuote } from "./feats/quote/template.js"
+import { featPricing } from "./feats/pricing/template.js"
+import { featProviders } from "./feats/providers/template.js"
 
 const title = "shrimple.io"
 const domain = "shrimple.io"
@@ -39,7 +44,16 @@ export default ssg.page(import.meta.url, async orb => ({
 		<shrimple-header></shrimple-header>
 
 		<main>
-			<shrimple-base></shrimple-base>
+			<shrimple-base>
+				${orb.place(featTitle)}
+
+				<div class=featurettes>
+					${orb.place(featMindset)}
+					${orb.place(featQuote)}
+					${orb.place(featProviders)}
+					${orb.place(featPricing)}
+				</div>
+			</shrimple-base>
 		</main>
 
 		<footer>

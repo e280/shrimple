@@ -1,7 +1,8 @@
 
-import {dom} from "@e280/sly"
-import {ShrimpleShell} from "./ui/shell/component.js"
+import {dom, view} from "@e280/sly"
+import {context} from "./ui/context.js"
 
-dom.register({ShrimpleShell})
-debugger
+dom.register({
+	ShrimpleShell: view.component(() => context.router.render()),
+})
 
