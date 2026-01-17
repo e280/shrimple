@@ -47,9 +47,9 @@
 
 			padding: 3em 1em;
 			background: #1114;
-			backdrop-filter: blur(0.5em);
 			border-top: 0.1em solid #fff2;
-			box-shadow: 0em -0.5em 1em #0004;
+			border-top-right-radius: 20px;
+			border-top-left-radius: 20px;
 		}
 	}
 
