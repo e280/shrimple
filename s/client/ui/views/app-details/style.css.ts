@@ -3,6 +3,7 @@ import {css} from "lit"
 export default css`@layer view {
 :host {
 	flex: 1;
+	min-width: 0;
 }
 
 .container {
@@ -156,6 +157,8 @@ export default css`@layer view {
 	}
 
 	.code-block {
+		min-width: 0;
+
 		pre {
 			margin: 0;
 			padding: var(--padding);
@@ -165,6 +168,7 @@ export default css`@layer view {
 			font-family: var(--font-tech);
 			font-size: var(--font-size-small);
 			overflow-x: auto;
+			max-width: 100%;
 			border: 1px solid var(--border);
 		}
 	}
