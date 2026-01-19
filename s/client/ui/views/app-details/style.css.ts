@@ -146,8 +146,8 @@ export default css`@layer view {
 		}
 
 		.step-title {
-			font-size: var(--font-size-smaller);
 			font-weight: 600;
+			color: white;
 		}
 
 		.step-desc {
