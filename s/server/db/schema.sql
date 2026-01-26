@@ -1,8 +1,4 @@
 
-import {sql} from "../utils/sql.js"
-
-export const schema = sql`
-
 PRAGMA foreign_keys = ON;
 
 -- users
@@ -55,6 +51,4 @@ CREATE INDEX IF NOT EXISTS idx_eventLogin_time
 
 CREATE INDEX IF NOT EXISTS idx_apps_userId
 	ON apps(userId);
-
-`
 

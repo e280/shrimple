@@ -3,6 +3,7 @@
 /temp
 /assets
 /db
+/data
 
 /node_modules
 /yarn.lock
