@@ -1,10 +1,10 @@
 
 import {Fns} from "@e280/renraku"
-import {Db} from "../db/types.js"
+import {Hub} from "../hub.js"
 
 export type Api = ReturnType<typeof makeApi>
 
-export const makeApi = (db: Db) => ({
+export const makeApi = (hub: Hub) => ({
 	async now() {
 		return Date.now()
 	},
