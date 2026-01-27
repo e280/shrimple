@@ -19,7 +19,7 @@ await migrate({
 })
 
 const port = Number(env("SHRIMPLE_PORT"))
-const isDev = env("SHRIMPLE_DEV") === "yes"
+const isDev = env("NODE_ENV") === "development"
 const schema = await readText(consts.db.schemaPath)
 const db = await sqliteFileDb(dataPath("db/sqlite"), schema)
 const hub = new Hub(db)
